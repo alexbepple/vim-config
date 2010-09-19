@@ -77,21 +77,14 @@ nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Workaround for Kupfer not copying the current selection properly
-function! Update_clipboard_in_visual_modes ()
-    if mode() ==? 'v'
-        call Update_clipboard()
-    endif
-endfunction
-
 function! Update_clipboard ()
     call system("xclip -i ", getreg("\*"))
 endfunction
-    
-autocmd CursorMoved * :call Update_clipboard_in_visual_modes()
-nnoremap <S-v> :call Update_clipboard()<cr><s-v>
+nnoremap <s-v> :call Update_clipboard()<cr><s-v>
+vnoremap <space> <esc>:call Update_clipboard()<cr>gv
 
-" Easily copy selection to clipboarEasily copy selection to clipboard
-vnoremap <cr> "+y
+" Easily copy selection to clipboard
+vnoremap <cr> "+ygv
 
 " Automatically save everything when losing focus
 autocmd FocusLost * :wa

@@ -14,14 +14,10 @@ set tabstop=4
 set softtabstop=4
 set expandtab " replaces tabs with spaces
 set autoindent
-"set cindent
-"set smartindent
 
 " Auto-save
 :set autowrite
 
-" Folding
-"set foldmethod=indent
 
 """""""
 " Misc

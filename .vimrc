@@ -71,7 +71,7 @@ vnoremap <BS> <gv
 vnoremap ' <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap " <Esc>`>a"<Esc>`<i"<Esc>
 
-" Quickly reread vimrc
+" Quickly edit vimrc
 let mapleader=","
 nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -90,6 +90,9 @@ endfunction
 autocmd CursorMoved * :call Update_clipboard_in_visual_modes()
 nnoremap <S-v> :call Update_clipboard()<cr><s-v>
 
-" Misc
+" Easily copy selection to clipboarEasily copy selection to clipboard
 vnoremap <cr> "+y
+
+" Automatically save everything when losing focus
+autocmd FocusLost * :wa
 

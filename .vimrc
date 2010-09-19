@@ -15,8 +15,10 @@ set softtabstop=4
 set expandtab " replaces tabs with spaces
 set autoindent
 
-" Auto-save
-:set autowrite
+" FuzzyFinder
+nnoremap fb :FufBuffer<cr>
+nnoremap ff :FufFile<cr>
+autocmd FocusGained * :FufRenewCache
 
 
 """""""
@@ -38,9 +40,6 @@ set noswapfile " The most annoying thing ever.
 " Save lots of Shift presses
 nnoremap ö :
 
-map <F3> :FufBuffer<Enter>
-map <F5> :FufRenewCache<Enter>
-map <A-o> :FufFile<Enter>
 map <C-w> :bd<Enter>
 
 :set exrc

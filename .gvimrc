@@ -1,4 +1,4 @@
-set lines=50 columns=85
+set lines=80 columns=85
 set guifont=Consolas\ 9
 set guioptions-=T
 

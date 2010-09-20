@@ -65,7 +65,6 @@ vnoremap <a-j> :m'>+<cr>gv
 vnoremap <a-k> :m-2<cr>gv
 
 " More convenient (un)indenting
-inoremap <s-tab> <bs>
 nnoremap <tab> >>
 vnoremap <tab> >gv
 nnoremap <bs> <<

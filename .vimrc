@@ -65,12 +65,11 @@ vnoremap <a-j> :m'>+<cr>gv
 vnoremap <a-k> :m-2<cr>gv
 
 " More convenient (un)indenting
-nnoremap <Tab> >>
-nnoremap <a-l> >>
-vnoremap <Tab> >gv
-vnoremap <a-l> >gv
-nnoremap <BS> <<
-vnoremap <BS> <gv
+inoremap <s-tab> <bs>
+nnoremap <tab> >>
+vnoremap <tab> >gv
+nnoremap <bs> <<
+vnoremap <bs> <gv
 
 " Mate-like surround-with
 vnoremap ' <Esc>`>a'<Esc>`<i'<Esc>

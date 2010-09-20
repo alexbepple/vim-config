@@ -18,7 +18,7 @@ set autoindent
 " FuzzyFinder
 nnoremap fb :FufBuffer<cr>
 nnoremap ff :FufFile<cr>
-autocmd FocusGained * :FufRenewCache
+nnoremap fr :FufRenewCache<cr>
 
 " Comments
 nnoremap m :call CommentLine()<cr>

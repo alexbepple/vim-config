@@ -16,7 +16,7 @@ set expandtab " replaces tabs with spaces
 set autoindent
 
 " FuzzyFinder
-nnoremap fb :FufBuffer<cr>
+nnoremap f<space> :FufBuffer<cr>
 nnoremap ff :FufFile<cr>
 nnoremap fr :FufRenewCache<cr>
 

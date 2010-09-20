@@ -20,6 +20,12 @@ nnoremap fb :FufBuffer<cr>
 nnoremap ff :FufFile<cr>
 autocmd FocusGained * :FufRenewCache
 
+" Comments
+nnoremap m :call CommentLine()<cr>
+vnoremap m :call CommentLine()<cr>gv
+nnoremap <s-m> :call UnCommentLine()<cr>
+vnoremap <s-m> :call UnCommentLine()<cr>gv
+
 
 """""""
 " Misc

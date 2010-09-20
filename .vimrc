@@ -26,6 +26,10 @@ vnoremap m :call CommentLine()<cr>gv
 nnoremap <s-m> :call UnCommentLine()<cr>
 vnoremap <s-m> :call UnCommentLine()<cr>gv
 
+" Faster paging
+nnoremap <space> <pagedown>
+nnoremap <s-space> <pageup>
+
 
 """""""
 " Misc

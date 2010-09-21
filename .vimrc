@@ -95,4 +95,5 @@ vnoremap <cr> "+ygv
 
 " Automatically save everything when losing focus
 autocmd FocusLost * :wa
+set autowrite
 

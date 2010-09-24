@@ -41,6 +41,8 @@ colorscheme corporation "Color scheme
 set cursorline "Highlight the line the cursor is on
 set scrolloff=2 "Always keep a distance of two lines when scrolling
 
+set winaltkeys=no "Prevent Alt-mappings from interfering with menu mnemonics
+
 set wildmode=longest,list "Completes the longest common string, shows list on second press
 set wildignore+=*.pyc,*.class
 
@@ -53,7 +55,7 @@ set noswapfile " The most annoying thing ever.
 " Save lots of Shift presses
 nnoremap ö :
 
-map <C-w> :bd<Enter>
+nnoremap <a-w> :bd<Enter>
 
 :set exrc
 :set secure

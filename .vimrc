@@ -19,6 +19,7 @@ set autoindent
 nnoremap f<space> :FufBuffer<cr>
 nnoremap ff :FufFile<cr>
 nnoremap fr :FufRenewCache<cr>
+nnoremap fj :FufJumpList<cr>
 
 " Comments
 nnoremap m :call CommentLine()<cr>
@@ -30,12 +31,15 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
 nnoremap <space> <pagedown>
 nnoremap <s-space> <pageup>
 
+" Pensieve
+command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
+
 
 """""""
 " Misc
 """""""
 colorscheme corporation "Color scheme
-set cursorline
+set cursorline "Highlight the line the cursor is on
 set scrolloff=2 "Always keep a distance of two lines when scrolling
 
 set wildmode=longest,list "Completes the longest common string, shows list on second press

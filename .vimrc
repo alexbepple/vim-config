@@ -76,8 +76,10 @@ vnoremap <a-k> :m-2<cr>gv
 " More convenient (un)indenting
 nnoremap <tab> >>
 vnoremap <tab> >gv
-nnoremap <bs> <<
-vnoremap <bs> <gv
+nnoremap <a-l> >>
+vnoremap <a-l> >gv
+nnoremap <a-h> <<
+vnoremap <a-h> <gv
 
 " Mate-like surround-with
 vnoremap ' <Esc>`>a'<Esc>`<i'<Esc>

@@ -3,7 +3,6 @@ set nocompatible
 " Search
 set incsearch
 set ignorecase
-set hlsearch
 noremap // :nohlsearch<cr>
 " Search for selection
 vnoremap g/ y/<C-R>"<CR>

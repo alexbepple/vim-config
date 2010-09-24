@@ -91,7 +91,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 function! Update_clipboard ()
     call system("xclip -i ", getreg("\*"))
 endfunction
-nnoremap <s-v> :call Update_clipboard()<cr><s-v>
+nnoremap <s-v> <s-v><esc>:call Update_clipboard()<cr>gv
 vnoremap <space> <esc>:call Update_clipboard()<cr>gv
 
 " Easily copy selection to clipboard

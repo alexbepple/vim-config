@@ -16,7 +16,9 @@ set autoindent
 
 " FuzzyFinder
 nnoremap f<space> :FufBuffer<cr>
+vnoremap f<space> <esc>:FufBuffer<cr>
 nnoremap ff :FufFile<cr>
+vnoremap ff <esc>:FufFile<cr>
 nnoremap fr :FufRenewCache<cr>
 nnoremap fj :FufJumpList<cr>
 

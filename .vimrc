@@ -34,6 +34,8 @@ nnoremap <s-space> <pageup>
 
 " Pensieve
 command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
+command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
+command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 
 
 """""""
@@ -101,6 +103,8 @@ vnoremap <space> <esc>:call Update_clipboard()<cr>gv
 
 " Easily copy selection to clipboard
 vnoremap <cr> "+ygv
+" Paste and indent
+nnoremap <c-v> "+p==
 
 " Automatically save everything when losing focus
 autocmd FocusLost * :wa

@@ -39,7 +39,7 @@ command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
 """""""
 " Misc
 """""""
-colorscheme corporation "Color scheme
+colorscheme elegant
 set cursorline "Highlight the line the cursor is on
 set scrolloff=2 "Always keep a distance of two lines when scrolling
 

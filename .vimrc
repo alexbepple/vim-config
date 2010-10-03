@@ -59,6 +59,9 @@ set noswapfile " The most annoying thing ever.
 " Save lots of Shift presses
 nnoremap ö :
 
+" Prevent accidental <F1> presses
+noremap <f1> <esc>
+
 nnoremap <a-w> :bd<Enter>
 
 :set exrc

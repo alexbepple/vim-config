@@ -1,6 +1,8 @@
 " Licensed under the WTFPL
 " http://sam.zoy.org/wtfpl/
 
+" Based on colors used in the Elegant GTK theme.
+
 set background=dark
 hi clear
 if exists("syntax_on")
@@ -11,6 +13,8 @@ let g:colors_name = "elegant"
 
 
 hi Normal guifg=#eeeeec guibg=#1f1f1f
+hi CursorLine guibg=#2b2b2b
+
 
 hi Comment	gui=italic	guifg=#5E6C70
 hi Constant			guifg=#A1A6A8
@@ -24,7 +28,6 @@ hi DiffText					guibg=#492224
 hi Error			guifg=#A1A6A8	guibg=#912C00
 hi FoldColumn	gui=italic	guifg=#192224	guibg=#A1A6A8
 hi Identifier			guifg=#BD9800
-hi ModeMsg	gui=bold	guifg=#F9F9F9	guibg=#192224
 hi PreProc			guifg=#BD9800
 hi Search			guifg=#192224	guibg=#BD9800
 hi SignColumn			guifg=#192224	guibg=#536991
@@ -42,7 +45,6 @@ hi WildMenu					guibg=#A1A6A8
 hi! link Boolean	Constant
 hi! link Character	Constant
 hi! link Conditional	Statement
-hi! link CursorLine	CursorColumn
 hi! link Debug		Special
 hi! link Define		PreProc
 hi! link Delimiter	Special

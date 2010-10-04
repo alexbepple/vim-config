@@ -60,7 +60,8 @@ set noswapfile " The most annoying thing ever.
 nnoremap ö :
 
 " Prevent accidental <F1> presses
-noremap <f1> <esc>
+map <f1> <esc>
+imap <f1> <esc>
 
 nnoremap <a-w> :bd<Enter>
 

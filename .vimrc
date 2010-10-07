@@ -32,6 +32,10 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
 nnoremap <space> <pagedown>
 nnoremap <s-space> <pageup>
 
+" Navigate wrapped lines more conveniently
+map j gj
+map k gk
+
 " Pensieve
 command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
 command! -range=% FixLinebreaks :<line1>,<line2>s/\r//

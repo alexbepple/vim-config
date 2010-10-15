@@ -35,6 +35,8 @@ nnoremap <s-space> <pageup>
 " Navigate wrapped lines more conveniently
 map j gj
 map k gk
+map 0 g0
+map $ g$
 
 " Pensieve
 command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
@@ -45,7 +47,7 @@ command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 """""""
 " Misc
 """""""
-colorscheme elegant
+colorscheme ristretto
 set cursorline "Highlight the line the cursor is on
 set scrolloff=2 "Always keep a distance of two lines when scrolling
 
@@ -99,8 +101,8 @@ vnoremap " <Esc>`>a"<Esc>`<i"<Esc>
 
 " Quickly edit vimrc
 let mapleader=","
-nnoremap <leader>ev :edit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
+nnoremap <leader>sv :up<cr>:source %<cr>
 
 " Workaround for Kupfer not copying the current selection properly
 function! Update_clipboard ()

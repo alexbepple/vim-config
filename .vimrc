@@ -28,15 +28,24 @@ vnoremap m :call CommentLine()<cr>gv
 nnoremap <s-m> :call UnCommentLine()<cr>
 vnoremap <s-m> :call UnCommentLine()<cr>gv
 
-" Faster paging
-nnoremap <space> <pagedown>
-nnoremap <s-space> <pageup>
+" Scrolling and paging
 
-" Navigate wrapped lines more conveniently
-map j gj
-map k gk
-map 0 g0
-map $ g$
+    " Faster paging
+    nnoremap <space> <pagedown>
+    nnoremap <s-space> <pageup>
+
+    set scrolloff=2 "Always keep a distance of two lines when scrolling
+
+
+" Wrap lines
+
+    " Navigate wrapped lines more conveniently
+    map j gj
+    map k gk
+    map 0 g0
+    map $ g$
+
+    set showbreak=>\ 
 
 " Easily add empty lines
 nnoremap <a-o> o<esc>k
@@ -47,36 +56,26 @@ command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
 command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
 command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 
-
-"""""""
-" Misc
-"""""""
+" Appearance
 colorscheme ristretto
 set cursorline "Highlight the line the cursor is on
-set scrolloff=2 "Always keep a distance of two lines when scrolling
 
-set winaltkeys=no "Prevent Alt-mappings from interfering with menu mnemonics
-
+" Completion settings
 set wildmode=longest,list "Completes the longest common string, shows list on second press
 set wildignore+=*.pyc,*.class
 
-set showbreak=>\ 
+" Change modes more quickly
 
-set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
+    " Save lots of Shift presses
+    nnoremap ö :
 
-set noswapfile " The most annoying thing ever.
+    " Prevent accidental <F1> presses
+    map <f1> <esc>
+    imap <f1> <esc>
 
-" Save lots of Shift presses
-nnoremap ö :
 
-" Prevent accidental <F1> presses
-map <f1> <esc>
-imap <f1> <esc>
-
+" Quickly close buffer
 nnoremap <a-w> :bd<Enter>
-
-:set exrc
-:set secure
 
 " Markdown
 augroup mkd
@@ -99,7 +98,7 @@ vnoremap <a-l> >gv
 nnoremap <a-h> <<
 vnoremap <a-h> <gv
 
-" Mate-like surround-with
+" Surround with
 vnoremap ' <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap " <Esc>`>a"<Esc>`<i"<Esc>
 
@@ -123,4 +122,13 @@ nnoremap <c-v> "+p==
 " Automatically save everything when losing focus
 autocmd FocusLost * :wa
 set autowrite
+
+" Misc
+set winaltkeys=no "Prevent Alt-mappings from interfering with menu mnemonics
+set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
+set noswapfile " The most annoying thing ever.
+
+" Allow folder-specific vimrc files
+:set exrc
+:set secure " Prevent dangerous commands in external vimrc files. Last setting in vimrc
 

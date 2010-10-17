@@ -38,6 +38,10 @@ map k gk
 map 0 g0
 map $ g$
 
+" Easily add empty lines
+nnoremap <a-o> o<esc>k
+nnoremap <a-O> O<esc>j
+
 " Pensieve
 command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
 command! -range=% FixLinebreaks :<line1>,<line2>s/\r//

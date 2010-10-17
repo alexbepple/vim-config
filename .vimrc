@@ -30,6 +30,10 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
 
 " Scrolling and paging
 
+    " Faster paging
+    nnoremap <c-k> <pageup>
+    nnoremap <c-j> <pagedown>
+    
     set scrolloff=2 "Always keep a distance of two lines when scrolling
 
 
@@ -65,6 +69,7 @@ set wildignore+=*.pyc,*.class
 
     inoremap <space><space> <esc>
     nnoremap <space> :
+    cnoremap <space><space> <c-c>
 
     " Prevent accidental <F1> presses
     map <f1> <esc>

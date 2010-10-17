@@ -30,10 +30,6 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
 
 " Scrolling and paging
 
-    " Faster paging
-    nnoremap <space> <pagedown>
-    nnoremap <s-space> <pageup>
-
     set scrolloff=2 "Always keep a distance of two lines when scrolling
 
 
@@ -64,10 +60,11 @@ set cursorline "Highlight the line the cursor is on
 set wildmode=longest,list "Completes the longest common string, shows list on second press
 set wildignore+=*.pyc,*.class
 
+
 " Change modes more quickly
 
-    " Save lots of Shift presses
-    nnoremap ö :
+    inoremap <space><space> <esc>
+    nnoremap <space> :
 
     " Prevent accidental <F1> presses
     map <f1> <esc>

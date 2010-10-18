@@ -1,11 +1,15 @@
 set nocompatible
 
 " Search
-set incsearch
-set ignorecase
-noremap // :nohlsearch<cr>
-" Search for selection
-vnoremap g/ y/<C-R>"<CR>
+    set incsearch
+    set ignorecase
+    noremap // :nohlsearch<cr>
+
+    " Search for selection
+    vnoremap g/ y/<C-R>"<CR>
+
+    set grepprg=ack-grep
+    set grepformat=%f:%l:%m
 
 " Tabbing
 set shiftwidth=4

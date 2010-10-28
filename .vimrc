@@ -71,9 +71,10 @@ set wildignore+=*.pyc,*.class
 
 " Change modes more quickly
 
-    inoremap <space><space> <esc>
+    inoremap <s-space> <esc>
+    cnoremap <s-space> <c-c>
     nnoremap <space> :
-    cnoremap <space><space> <c-c>
+    vnoremap <space> <esc>
 
     " Prevent accidental <F1> presses
     map <f1> <esc>
@@ -114,11 +115,11 @@ nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :up<cr>:source %<cr>
 
 " Workaround for Kupfer not copying the current selection properly
-function! Update_clipboard ()
+function! Update_X_selection ()
     call system("xclip -i ", getreg("\*"))
 endfunction
-nnoremap <s-v> <s-v><esc>:call Update_clipboard()<cr>gv
-vnoremap <space> <esc>:call Update_clipboard()<cr>gv
+nnoremap <s-v> <s-v><esc>:call Update_X_selection()<cr>gv
+vnoremap <s-cr> <esc>:call Update_X_selection()<cr>gv
 
 " Easily copy selection to clipboard
 vnoremap <cr> "+ygv

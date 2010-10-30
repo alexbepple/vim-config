@@ -55,6 +55,9 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
 nnoremap <a-o> o<esc>k
 nnoremap <a-O> O<esc>j
 
+" Split lines
+nnoremap S i<cr><esc>
+
 " Pensieve
 command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
 command! -range=% FixLinebreaks :<line1>,<line2>s/\r//

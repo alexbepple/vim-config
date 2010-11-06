@@ -52,8 +52,8 @@ vnoremap <s-m> :call UnCommentLine()<cr>gv
     set showbreak=>\ 
 
 " Easily add empty lines
-nnoremap <a-o> o<esc>k
-nnoremap <a-O> O<esc>j
+nnoremap <a-o> o<esc>
+nnoremap <a-O> O<esc>
 
 " Split lines
 nnoremap S i<cr><esc>

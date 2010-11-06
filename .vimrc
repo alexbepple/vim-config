@@ -109,8 +109,10 @@ nnoremap <a-h> <<
 vnoremap <a-h> <gv
 
 " Surround with
-vnoremap ' <Esc>`>a'<Esc>`<i'<Esc>
-vnoremap " <Esc>`>a"<Esc>`<i"<Esc>
+let mapleader="z"
+vnoremap <leader>' <Esc>`>a'<Esc>`<i'<Esc>
+vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
+vnoremap <leader>< <Esc>`>a»<Esc>`<i«<Esc>
 
 " Quickly edit vimrc
 let mapleader=","

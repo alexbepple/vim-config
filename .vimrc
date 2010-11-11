@@ -110,20 +110,19 @@ vnoremap <a-h> <gv
 
 " Surround with
 let mapleader="z"
-vnoremap <leader>' :call EncloseSelectionWith1("'")<cr>
-vnoremap <leader>" :call EncloseSelectionWith1('"')<cr>
+vnoremap <leader>' :call EncloseSelectionWith("'")<cr>
+vnoremap <leader>" :call EncloseSelectionWith('"')<cr>
 vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
-vnoremap <leader>{ :call EncloseSelectionWith("{", "}")<cr>
+vnoremap <leader>{ :call EncloseSelectionWith('{', '}')<cr>
+vnoremap <leader>[ :call EncloseSelectionWith('[', ']')<cr>
+vnoremap <leader>( :call EncloseSelectionWith('(', ')')<cr>
 
 function! ReplaceSelectionWith(replacement)
     exe 'normal gvc'.a:replacement
 endfunction
-function! EncloseSelectionWith1(enclosingString)
-    let enclosedString = a:enclosingString.GetVisualText().a:enclosingString
-    call ReplaceSelectionWith(enclosedString)
-endfunction
-function! EncloseSelectionWith(prefix, suffix)
-    let enclosedString = a:prefix.GetVisualText().a:suffix
+function! EncloseSelectionWith(prefix, ...)
+    let suffix = a:0 == 1 ? a:1 : a:prefix
+    let enclosedString = a:prefix.GetVisualText().suffix
     call ReplaceSelectionWith(enclosedString)
 endfunction
 function! GetVisualText()

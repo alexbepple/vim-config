@@ -26,6 +26,11 @@ vnoremap ff <esc>:FufFile<cr>
 nnoremap fr :FufRenewCache<cr>
 nnoremap fj :FufJumpList<cr>
 
+let g:fuf_abbrevMap = {}
+" Begin pensieve queries with a space
+let g:fuf_abbrevMap['^ '] = ['~/pensieve/']
+
+
 " Comments
 nnoremap m :call CommentLine()<cr>
 vnoremap m :call CommentLine()<cr>gv

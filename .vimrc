@@ -121,6 +121,8 @@ vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
 vnoremap <leader>{ :call EncloseSelectionWith('{', '}')<cr>
 vnoremap <leader>[ :call EncloseSelectionWith('[', ']')<cr>
 vnoremap <leader>( :call EncloseSelectionWith('(', ')')<cr>
+vnoremap <leader>` :call EncloseSelectionWith('`')<cr>
+vnoremap <leader>_ :call EncloseSelectionWith('_')<cr>
 
 function! ReplaceSelectionWith(replacement)
     exe 'normal gvc'.a:replacement

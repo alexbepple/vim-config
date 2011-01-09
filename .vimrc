@@ -123,6 +123,7 @@ vnoremap <leader>[ :call EncloseSelectionWith('[', ']')<cr>
 vnoremap <leader>( :call EncloseSelectionWith('(', ')')<cr>
 vnoremap <leader>` :call EncloseSelectionWith('`')<cr>
 vnoremap <leader>_ :call EncloseSelectionWith('_')<cr>
+vnoremap <leader>* :call EncloseSelectionWith('*')<cr>
 
 function! ReplaceSelectionWith(replacement)
     exe 'normal gvc'.a:replacement
@@ -141,15 +142,6 @@ let mapleader=","
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :up<cr>:source %<cr>
 
-" Workaround for Kupfer not copying the current selection properly
-function! Update_X_selection ()
-    call system("xclip -i ", getreg("\*"))
-endfunction
-nnoremap <s-v> <s-v><esc>:call Update_X_selection()<cr>gv
-vnoremap <s-cr> <esc>:call Update_X_selection()<cr>gv
-
-" Easily copy selection to clipboard
-vnoremap <cr> "+ygv
 " Paste and indent
 nnoremap <c-v> "+p==
 

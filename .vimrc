@@ -134,7 +134,8 @@ function! EncloseSelectionWith(prefix, ...)
     call ReplaceSelectionWith(enclosedString)
 endfunction
 function! GetVisualText()
-    return getreg("*")
+    exe 'normal gvy'
+    return getreg('"')
 endfunc
 
 " Quickly edit vimrc

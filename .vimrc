@@ -28,7 +28,7 @@ nnoremap fj :FufJumpList<cr>
 
 let g:fuf_abbrevMap = {}
 " Begin pensieve queries with a space
-let g:fuf_abbrevMap['^ '] = ['~/pensieve/']
+let g:fuf_abbrevMap['^ '] = ['~/.pensieve/']
 
 
 " Comments

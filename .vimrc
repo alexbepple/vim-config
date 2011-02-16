@@ -32,10 +32,10 @@ let g:fuf_abbrevMap['^ '] = ['~/.pensieve/']
 
 
 " Comments
-nnoremap m :call CommentLine()<cr>
-vnoremap m :call CommentLine()<cr>gv
-nnoremap <s-m> :call UnCommentLine()<cr>
-vnoremap <s-m> :call UnCommentLine()<cr>gv
+nnoremap zm :call CommentLine()<cr>
+vnoremap zm :call CommentLine()<cr>gv
+nnoremap z<s-m> :call UnCommentLine()<cr>
+vnoremap z<s-m> :call UnCommentLine()<cr>gv
 
 " Scrolling and paging
 

@@ -115,17 +115,9 @@ vnoremap <a-h> <gv
 
 " Surround with
 let mapleader="z"
-vnoremap <leader>' :call EncloseSelectionWith("'")<cr>
-vnoremap <leader>" :call EncloseSelectionWith('"')<cr>
 vnoremap <leader>“ :call EncloseSelectionWith('“', '”')<cr>
 vnoremap <leader>„ :call EncloseSelectionWith('„', '“')<cr>
 vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
-vnoremap <leader>{ :call EncloseSelectionWith('{', '}')<cr>
-vnoremap <leader>[ :call EncloseSelectionWith('[', ']')<cr>
-vnoremap <leader>( :call EncloseSelectionWith('(', ')')<cr>
-vnoremap <leader>` :call EncloseSelectionWith('`')<cr>
-vnoremap <leader>_ :call EncloseSelectionWith('_')<cr>
-vnoremap <leader>* :call EncloseSelectionWith('*')<cr>
 
 function! ReplaceSelectionWith(replacement)
     exe 'normal gvc'.a:replacement

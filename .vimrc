@@ -117,6 +117,8 @@ vnoremap <a-h> <gv
 let mapleader="z"
 vnoremap <leader>' :call EncloseSelectionWith("'")<cr>
 vnoremap <leader>" :call EncloseSelectionWith('"')<cr>
+vnoremap <leader>“ :call EncloseSelectionWith('“', '”')<cr>
+vnoremap <leader>„ :call EncloseSelectionWith('„', '“')<cr>
 vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
 vnoremap <leader>{ :call EncloseSelectionWith('{', '}')<cr>
 vnoremap <leader>[ :call EncloseSelectionWith('[', ']')<cr>

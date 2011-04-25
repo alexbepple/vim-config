@@ -146,7 +146,9 @@ set autowrite
 " Misc
 set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
 set noswapfile " The most annoying thing ever.
+
 set macmeta
+noremap -- :set invmacmeta<cr>
 
 " Allow folder-specific vimrc files
 set exrc

@@ -3,12 +3,12 @@ set nocompatible
 " Search
     set incsearch
     set ignorecase
-    noremap // :nohlsearch<cr>
+    noremap // :set invhlsearch<cr>
 
     " Search for selection
     vnoremap g/ y/<C-R>"<CR>
 
-    set grepprg=ack-grep
+    set grepprg=ack
     set grepformat=%f:%l:%m
 
 " Tabbing
@@ -40,8 +40,8 @@ vnoremap z<s-m> :call UnCommentLine()<cr>gv
 " Scrolling and paging
 
     " Faster paging
-    nnoremap <c-k> <pageup>
-    nnoremap <c-j> <pagedown>
+    nnoremap <d-k> <pageup>
+    nnoremap <d-j> <pagedown>
     
     set scrolloff=2 "Always keep a distance of two lines when scrolling
 
@@ -54,7 +54,9 @@ vnoremap z<s-m> :call UnCommentLine()<cr>gv
     map 0 g0
     map $ g$
 
-    set showbreak=>\ 
+    set linebreak "Only wrap at sensible points
+    "How wrapped lines should begin
+    set showbreak=.\ \ \ 
 
 " Easily add empty lines
 nnoremap <a-o> o<esc>
@@ -115,8 +117,8 @@ vnoremap <a-h> <gv
 
 " Surround with
 let mapleader="z"
-vnoremap <leader>“ :call EncloseSelectionWith('“', '”')<cr>
-vnoremap <leader>„ :call EncloseSelectionWith('„', '“')<cr>
+vnoremap <leader>ed :call EncloseSelectionWith('“', '”')<cr>
+vnoremap <leader>gd :call EncloseSelectionWith('„', '“')<cr>
 vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
 
 function! ReplaceSelectionWith(replacement)
@@ -137,19 +139,16 @@ let mapleader=","
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :up<cr>:source %<cr>
 
-" Paste and indent
-nnoremap <c-v> "+p==
-
 " Automatically save everything when losing focus
 autocmd FocusLost * :wa
 set autowrite
 
 " Misc
-set winaltkeys=no "Prevent Alt-mappings from interfering with menu mnemonics
 set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
 set noswapfile " The most annoying thing ever.
+set macmeta
 
 " Allow folder-specific vimrc files
-:set exrc
-:set secure " Prevent dangerous commands in external vimrc files. Last setting in vimrc
+set exrc
+set secure " Prevent dangerous commands in external vimrc files. Last setting in vimrc
 

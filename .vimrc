@@ -11,6 +11,8 @@ set nocompatible
     Bundle 'FuzzyFinder'
     " L9 is a dependency of FuzzyFinder
     Bundle 'L9'
+    Bundle 'camelcasemotion'
+    Bundle 'tpope/vim-fugitive'
 
     filetype plugin indent on
 

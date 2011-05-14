@@ -6,7 +6,8 @@ set nocompatible
     call vundle#rc()
 
     Bundle 'altercation/vim-colors-solarized'
-
+    Bundle 'tpope/vim-surround'
+    Bundle 'msanders/snipmate.vim.git'
     Bundle 'FuzzyFinder'
     " L9 is a dependency of FuzzyFinder
     Bundle 'L9'

@@ -1,5 +1,7 @@
 set nocompatible
 
+call pathogen#runtime_append_all_bundles()
+
 " Search
     set incsearch
     set ignorecase

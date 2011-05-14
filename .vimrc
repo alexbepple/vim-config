@@ -14,6 +14,7 @@ set nocompatible
     Bundle 'camelcasemotion'
     Bundle 'tpope/vim-fugitive'
     Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'tpope/vim-rails'
     Bundle 'tpope/vim-pathogen'
 
     filetype plugin indent on

@@ -16,6 +16,7 @@ set nocompatible
     Bundle 'Lokaltog/vim-easymotion'
     Bundle 'tpope/vim-rails'
     Bundle 'tpope/vim-pathogen'
+    Bundle 'scrooloose/nerdcommenter'
 
     filetype plugin indent on
 
@@ -55,10 +56,8 @@ let g:fuf_abbrevMap['^ '] = ['~/.pensieve/']
 
 
 " Comments
-nnoremap zm :call CommentLine()<cr>
-vnoremap zm :call CommentLine()<cr>gv
-nnoremap z<s-m> :call UnCommentLine()<cr>
-vnoremap z<s-m> :call UnCommentLine()<cr>gv
+nnoremap <silent> zz :call NERDComment(0, "toggle")<cr>
+vnoremap <silent> zz <ESC>:call NERDComment(1, "toggle")<cr>
 
 " Scrolling and paging
 

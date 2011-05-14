@@ -5,7 +5,11 @@ set nocompatible
     set rtp+=~/.vim/vundle.git
     call vundle#rc()
 
-    Bundle "altercation/vim-colors-solarized"
+    Bundle 'altercation/vim-colors-solarized'
+
+    Bundle 'FuzzyFinder'
+    " L9 is a dependency of FuzzyFinder
+    Bundle 'L9'
 
     filetype plugin indent on
 

@@ -13,6 +13,7 @@ set nocompatible
     Bundle 'L9'
     Bundle 'camelcasemotion'
     Bundle 'tpope/vim-fugitive'
+    Bundle 'Lokaltog/vim-easymotion'
 
     filetype plugin indent on
 

@@ -73,7 +73,8 @@ command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
 command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 
 " Appearance
-colorscheme ristretto
+set background=dark
+colorscheme solarized
 set cursorline "Highlight the line the cursor is on
 
 " Completion settings

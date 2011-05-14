@@ -14,9 +14,13 @@ set nocompatible
     Bundle 'camelcasemotion'
     Bundle 'tpope/vim-fugitive'
     Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'tpope/vim-pathogen'
 
     filetype plugin indent on
 
+" Pathogen for local bundles
+    call pathogen#runtime_append_all_bundles('local_bundles')
+    call pathogen#cycle_filetype()
 
 " Search
     set incsearch

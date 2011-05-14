@@ -1,6 +1,14 @@
 set nocompatible
 
-call pathogen#runtime_append_all_bundles()
+" Vundle
+    filetype off
+    set rtp+=~/.vim/vundle.git
+    call vundle#rc()
+
+    Bundle "altercation/vim-colors-solarized"
+
+    filetype plugin indent on
+
 
 " Search
     set incsearch

@@ -15,6 +15,7 @@ set nocompatible
     Bundle 'tpope/vim-fugitive'
     Bundle 'Lokaltog/vim-easymotion'
     Bundle 'tpope/vim-rails'
+    Bundle 'tpope/vim-cucumber'
     Bundle 'tpope/vim-pathogen'
     Bundle 'scrooloose/nerdcommenter'
 

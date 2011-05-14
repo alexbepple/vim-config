@@ -118,11 +118,6 @@ set wildignore+=*.pyc,*.class
 " Quickly close buffer
 nnoremap <a-w> :bd<Enter>
 
-" Markdown
-augroup mkd
-    autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
-augroup END
-
 " Moving lines
 nnoremap <a-j> :m+<CR>
 nnoremap <a-k> :m-2<CR>

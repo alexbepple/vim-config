@@ -87,7 +87,7 @@ set nocompatible
 " Wrap lines
     set linebreak "Only wrap at sensible points
     "How wrapped lines should begin
-    set showbreak=.\ \ \ 
+    set showbreak=…\ \ \ \ \ \  
 
 
 " Easily add empty lines

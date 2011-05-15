@@ -11,4 +11,5 @@ macmenu File.Close key=<nop>
 macmenu Buffers.Delete key=<d-w>
 macmenu Window.Select\ Next\ Tab key=<d-m-right>
 macmenu Window.Select\ Previous\ Tab key=<d-m-left>
+macmenu Edit.Font.Bigger key=<d-+>
 

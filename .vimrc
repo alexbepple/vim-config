@@ -91,8 +91,10 @@ set nocompatible
 
 
 " Easily add empty lines
-    nnoremap <a-o> o<esc>
-    nnoremap <a-O> O<esc>
+    " <a-o>
+    nnoremap ø o<esc>
+    " <a-O>
+    nnoremap Ø O<esc>
 
 
 " Split lines
@@ -122,26 +124,26 @@ set nocompatible
     imap <f1> <esc>
 
 
-" Quickly close buffer
-    nnoremap <a-w> :bd<Enter>
-
-
 " Moving lines
-    nnoremap <a-j> :m+<CR>
-    nnoremap <a-k> :m-2<CR>
-    inoremap <a-j> <Esc>:m+<CR>
-    inoremap <a-k> <Esc>:m-2<CR>
-    vnoremap <a-j> :m'>+<cr>gv
-    vnoremap <a-k> :m-2<cr>gv
+    " <a-j>
+    nnoremap º :m+<CR>
+    " <a-k>
+    nnoremap ∆ :m-2<CR>
+    inoremap º <Esc>:m+<CR>
+    inoremap ∆ <Esc>:m-2<CR>
+    vnoremap º :m'>+<cr>gv
+    vnoremap ∆ :m-2<cr>gv
 
 
 " More convenient (un)indenting
     nnoremap <tab> >>
     vnoremap <tab> >gv
-    nnoremap <a-l> >>
-    vnoremap <a-l> >gv
-    nnoremap <a-h> <<
-    vnoremap <a-h> <gv
+    " <a-l>
+    nnoremap @ >>
+    vnoremap @ >gv
+    " <a-h>
+    nnoremap ª <<
+    vnoremap ª <gv
 
 
 " Surround with

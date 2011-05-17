@@ -6,7 +6,6 @@ set nocompatible
 
     Bundle 'msanders/snipmate.vim.git'
     Bundle 'tpope/vim-fugitive'
-    Bundle 'tpope/vim-rails'
     Bundle 'tpope/vim-cucumber'
 
 
@@ -83,6 +82,15 @@ set nocompatible
     map k gk
     map 0 g0
     map $ g$
+
+
+" Ruby
+    " Select Ruby blocks
+    Bundle 'nelstrom/vim-textobj-rubyblock'
+    Bundle 'kana/vim-textobj-user'
+    runtime macros/matchit.vim
+
+    Bundle 'tpope/vim-rails'
 
 
 " Wrap lines

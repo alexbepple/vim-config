@@ -47,6 +47,7 @@ set nocompatible
     vnoremap ff <esc>:FufFile<cr>
     nnoremap fr :FufRenewCache<cr>
     nnoremap fj :FufJumpList<cr>
+    let g:fuf_keySwitchMatching = '<d-7>'
 
     let g:fuf_abbrevMap = {}
 

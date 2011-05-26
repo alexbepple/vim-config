@@ -51,6 +51,7 @@ set nocompatible
     let g:fuf_keySwitchMatching = '<d-7>'
 
     let g:fuf_abbrevMap = {}
+    let g:fuf_abbrevMap['//'] = ['**/']
 
 
 " Pensieve
@@ -59,7 +60,7 @@ set nocompatible
     command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 
     " Begin pensieve queries with a space
-    let g:fuf_abbrevMap['^ '] = ['~/.pensieve/']
+    let g:fuf_abbrevMap['^\.\.'] = ['~/.pensieve/']
 
 
 " Comments

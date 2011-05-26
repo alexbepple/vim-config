@@ -179,9 +179,9 @@ set nocompatible
     endfunc
 
 
-" Quickly edit vimrc
+" Quickly edit .vimrc
     let mapleader=","
-    nnoremap <leader>ev :edit $MYVIMRC<cr>
+    nnoremap <leader>ev :edit ~/engagements/vim/.vimrc<cr>
     nnoremap <leader>sv :up<cr>:source %<cr>
 
 

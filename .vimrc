@@ -194,8 +194,6 @@ set nocompatible
     set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
     set noswapfile " The most annoying thing ever.
 
-    noremap -- :set invmacmeta<cr>
-
     " Allow folder-specific vimrc files
     set exrc
 

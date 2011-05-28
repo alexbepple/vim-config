@@ -50,8 +50,7 @@ set nocompatible
     nnoremap fj :FufJumpList<cr>
     let g:fuf_keySwitchMatching = '<d-7>'
 
-    let g:fuf_abbrevMap = {}
-    let g:fuf_abbrevMap['//'] = ['**/']
+    nnoremap 77 :FufFile **/<cr>
 
 
 " Pensieve
@@ -59,8 +58,7 @@ set nocompatible
     command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
     command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
 
-    " Begin pensieve queries with a space
-    let g:fuf_abbrevMap['^\.\.'] = ['~/.pensieve/']
+    nnoremap -- :FufFile ~/.pensieve/<cr>
 
 
 " Comments

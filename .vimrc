@@ -195,6 +195,8 @@ set nocompatible
     " Allow folder-specific vimrc files
     set exrc
 
+    nnoremap <d-w> :bd<cr>
+
 
 " The plugin managers need to toggle the filetype plugin off and back on
     filetype off

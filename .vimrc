@@ -146,8 +146,6 @@ set nocompatible
 
 
 " More convenient (un)indenting
-    nnoremap <tab> >>
-    vnoremap <tab> >gv
     " <a-l>
     nnoremap @ >>
     vnoremap @ >gv

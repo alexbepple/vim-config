@@ -8,7 +8,6 @@ set nocompatible
     Bundle 'tpope/vim-fugitive'
     Bundle 'tpope/vim-cucumber'
     Bundle 'sjl/gundo.vim'
-    Bundle 'dbext.vim'
 
 
 " Pathogen for local bundles

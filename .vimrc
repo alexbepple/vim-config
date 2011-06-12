@@ -5,8 +5,6 @@ set nocompatible
     call vundle#rc()
 
     Bundle 'msanders/snipmate.vim.git'
-    Bundle 'tpope/vim-fugitive'
-    Bundle 'gregsexton/gitv'
     Bundle 'tpope/vim-cucumber'
     Bundle 'sjl/gundo.vim'
 
@@ -92,6 +90,11 @@ set nocompatible
     runtime macros/matchit.vim
 
     Bundle 'tpope/vim-rails'
+
+
+" Git
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'gregsexton/gitv'
 
 
 " Wrap lines

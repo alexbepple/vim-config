@@ -6,6 +6,7 @@ set nocompatible
 
     Bundle 'msanders/snipmate.vim.git'
     Bundle 'tpope/vim-fugitive'
+    Bundle 'gregsexton/gitv'
     Bundle 'tpope/vim-cucumber'
     Bundle 'sjl/gundo.vim'
 
@@ -202,4 +203,5 @@ set nocompatible
 
 " Prevent dangerous commands in external vimrc files. Last setting in vimrc
     set secure 
+
 

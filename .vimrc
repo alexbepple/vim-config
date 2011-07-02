@@ -23,8 +23,9 @@ set nocompatible
     " Search for selection
     vnoremap g/ y/<C-R>"<CR>
 
-    set grepprg=ack
-    set grepformat=%f:%l:%m
+    Bundle 'alexbepple/ack.vim'
+    let g:ackdir='~/.pensieve'
+    let g:ack_list_height=40
 
 
 " Tabbing

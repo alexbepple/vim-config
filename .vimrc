@@ -7,6 +7,7 @@ set nocompatible
     Bundle 'msanders/snipmate.vim.git'
     Bundle 'tpope/vim-cucumber'
     Bundle 'sjl/gundo.vim'
+    Bundle 'kana/vim-vspec'
     Bundle 'greyblake/vim-preview'
 
 " Pathogen for local bundles

@@ -158,6 +158,10 @@ set nocompatible
     nnoremap ª <<
     vnoremap ª <gv
 
+" Put and yank more conveniently
+    nnoremap p p`[v`] 
+    nnoremap P P`[v`] 
+    vnoremap y ygv
 
 " Surround with
     Bundle 'tpope/vim-surround'

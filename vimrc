@@ -186,7 +186,7 @@ set nocompatible
 
 " Quickly edit .vimrc
     let mapleader=","
-    nnoremap <leader>ev :edit ~/engagements/vim/.vimrc<cr>
+    nnoremap <leader>ev :edit ~/computing/vim/vimrc<cr>
     nnoremap <leader>sv :up<cr>:source %<cr>
 
 

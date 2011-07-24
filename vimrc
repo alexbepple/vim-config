@@ -204,6 +204,9 @@ set nocompatible
 
     nnoremap <d-w> :bd<cr>
 
+    " I have blocked the normal way of playing macros. This is the new one.
+    nnoremap t @
+
 
 " The plugin managers need to toggle the filetype plugin off and back on
     filetype off

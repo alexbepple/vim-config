@@ -25,7 +25,6 @@ set nocompatible
     vnoremap g/ y/<C-R>"<CR>
 
     Bundle 'alexbepple/ack.vim'
-    let g:ackdir='~/.pensieve'
     let g:ack_list_height=40
 
 
@@ -57,8 +56,6 @@ set nocompatible
     command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
     command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
     command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
-
-    nnoremap -- :FufFile ~/.pensieve/<cr>
 
 
 " Comments

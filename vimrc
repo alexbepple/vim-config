@@ -8,9 +8,8 @@ set nocompatible
     Bundle 'gmarik/vundle'
 
     Bundle 'msanders/snipmate.vim.git'
-    Bundle 'tpope/vim-cucumber'
     Bundle 'sjl/gundo.vim'
-    Bundle 'kana/vim-vspec'
+
 
 " Pathogen for local bundles
     Bundle 'tpope/vim-pathogen'
@@ -54,12 +53,6 @@ set nocompatible
     nnoremap 77 :FufFile **/<cr>
 
 
-" Pensieve
-    command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
-    command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
-    command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
-
-
 " Comments
     Bundle 'scrooloose/nerdcommenter'
 
@@ -82,15 +75,6 @@ set nocompatible
     map k gk
     map 0 g0
     map $ g$
-
-
-" Ruby
-    " Select Ruby blocks
-    Bundle 'nelstrom/vim-textobj-rubyblock'
-    Bundle 'kana/vim-textobj-user'
-    runtime macros/matchit.vim
-
-    Bundle 'tpope/vim-rails'
 
 
 " Git
@@ -205,6 +189,21 @@ set nocompatible
 
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @
+
+
+" Ruby
+    " Select Ruby blocks
+    Bundle 'nelstrom/vim-textobj-rubyblock'
+    Bundle 'kana/vim-textobj-user'
+    runtime macros/matchit.vim
+
+    Bundle 'tpope/vim-cucumber'
+
+    Bundle 'tpope/vim-rails'
+
+
+" VSpec
+    Bundle 'kana/vim-vspec'
 
 
 " The plugin managers need to toggle the filetype plugin off and back on

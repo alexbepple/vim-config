@@ -14,7 +14,7 @@ set nocompatible
 
 " Pathogen for local bundles
     Bundle 'tpope/vim-pathogen'
-    call pathogen#runtime_append_all_bundles('local_bundles')
+    call pathogen#runtime_append_all_bundles('local_bundle')
     call pathogen#cycle_filetype()
 
 

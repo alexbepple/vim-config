@@ -1,8 +1,11 @@
 set nocompatible
 
 " Init Vundle
-    set rtp+=~/.vim/vundle.git
+    set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
+    
+    " Manage Vundle with Vundle
+    Bundle 'gmarik/vundle'
 
     Bundle 'msanders/snipmate.vim.git'
     Bundle 'tpope/vim-cucumber'

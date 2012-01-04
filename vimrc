@@ -7,9 +7,6 @@ set nocompatible
     " Manage Vundle with Vundle
     Bundle 'gmarik/vundle'
 
-    Bundle 'msanders/snipmate.vim.git'
-    Bundle 'sjl/gundo.vim'
-
 
 " Leaders – as they may affect almost any plugin, they should be first
     let mapleader=","
@@ -199,6 +196,9 @@ set nocompatible
 
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @
+
+    Bundle 'msanders/snipmate.vim.git'
+    Bundle 'sjl/gundo.vim'
 
 
 " Ruby

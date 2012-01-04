@@ -110,6 +110,9 @@ set nocompatible
     set wildmode=longest,list "Completes the longest common string, shows list on second press
     set wildignore+=*.pyc,*.class
 
+    "set ofu=syntaxcomplete#Complete
+    "syntax on
+
 
 " Change modes more quickly
     inoremap <s-space> <esc>
@@ -202,6 +205,14 @@ set nocompatible
     Bundle 'tpope/vim-rails'
 
 
+" Clojure
+    Bundle 'VimClojure'
+    let g:vimclojure#ParenRainbow = 1
+    let g:vimclojure#DynamicHighlighting = 1
+
+    let vimclojure#WantNailgun = 1
+
+
 " VSpec
     Bundle 'kana/vim-vspec'
 
@@ -213,5 +224,4 @@ set nocompatible
 
 " Prevent dangerous commands in external vimrc files. Last setting in vimrc
     set secure 
-
 

@@ -11,6 +11,14 @@ set nocompatible
     Bundle 'sjl/gundo.vim'
 
 
+" Leaders – as they may affect almost any plugin, they should be first
+    let mapleader=","
+    let maplocalleader="-"
+    " showcmd displays the active leader in the bottom line and thus provides
+    " visual feedback
+    set showcmd
+
+
 " Pathogen for local bundles
     Bundle 'tpope/vim-pathogen'
     call pathogen#runtime_append_all_bundles('local_bundle')
@@ -151,7 +159,7 @@ set nocompatible
 
 " Surround with
     Bundle 'tpope/vim-surround'
-    let mapleader="z"
+
     vnoremap <leader>ed :call EncloseSelectionWith('“', '”')<cr>
     vnoremap <leader>gd :call EncloseSelectionWith('„', '“')<cr>
     vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
@@ -171,7 +179,6 @@ set nocompatible
 
 
 " Quickly edit .vimrc
-    let mapleader=","
     nnoremap <leader>ev :edit ~/computing/vim/vimrc<cr>
     nnoremap <leader>sv :up<cr>:source %<cr>
 

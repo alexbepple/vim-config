@@ -185,14 +185,31 @@ set nocompatible
     set autowrite
 
 
+" Close current buffer – or window when there are no buffers left
+    function! NumberOfBuffers()
+        let buffers = range(1, bufnr('$'))
+        call filter(buffers, 'buflisted(v:val)')
+        return len(buffers)
+    endfunction
+
+    function! CloseCurrent()
+        let bufcount = NumberOfBuffers()
+        if (bufcount == 1)
+            execute ":q"
+        else
+            execute ":bd"
+        endif
+    endfunction
+
+    nnoremap <d-w> :call CloseCurrent()<cr>
+
+
 " Misc
     set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
     set noswapfile " The most annoying thing ever.
 
     " Allow folder-specific vimrc files
     set exrc
-
-    nnoremap <d-w> :bd<cr>
 
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @

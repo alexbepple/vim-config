@@ -241,6 +241,12 @@ set nocompatible
     Bundle 'kana/vim-vspec'
 
 
+" Pensieve
+    command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
+    command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
+    command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
+
+
 " The plugin managers need to toggle the filetype plugin off and back on
     filetype off
     filetype plugin indent on

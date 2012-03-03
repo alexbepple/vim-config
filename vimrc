@@ -114,9 +114,6 @@ set nocompatible
     set wildmode=longest,list "Completes the longest common string, shows list on second press
     set wildignore+=*.pyc,*.class
 
-    "set ofu=syntaxcomplete#Complete
-    "syntax on
-
 
 " Change modes more quickly
     inoremap <s-space> <esc>

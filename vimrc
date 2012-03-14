@@ -63,12 +63,15 @@ set nocompatible
             let g:fuf_file_exclude = a:pattern
         endif
     endfunction
+    function! s:fuf_exclude_dir(dirname)
+        call s:fuf_exclude('(^|[/\\])' . a:dirname . '($|[/\\])')
+    endfunction
 
     " I know of no way to append my exclusions to the defaults. :(
     let s:fuf_defaults = '\v\~$|\.(o|exe|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
     call s:fuf_exclude(s:fuf_defaults)
     call s:fuf_exclude('\.(png|DS_Store|gitkeep)')
-    call s:fuf_exclude('(^|[/\\])vendor($|[/\\])')
+    call s:fuf_exclude_dir('vendor')
 
 
 " Comments

@@ -56,6 +56,20 @@ set nocompatible
 
     nnoremap 77 :FufFile **/<cr>
 
+    function! s:fuf_exclude(pattern)
+        if exists("g:fuf_file_exclude")
+            let g:fuf_file_exclude = g:fuf_file_exclude . "|" . a:pattern
+        else
+            let g:fuf_file_exclude = a:pattern
+        endif
+    endfunction
+
+    " I know of no way to append my exclusions to the defaults. :(
+    let s:fuf_defaults = '\v\~$|\.(o|exe|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+    call s:fuf_exclude(s:fuf_defaults)
+    call s:fuf_exclude('\.(png|DS_Store|gitkeep)')
+    call s:fuf_exclude('(^|[/\\])vendor($|[/\\])')
+
 
 " Comments
     Bundle 'scrooloose/nerdcommenter'

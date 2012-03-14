@@ -74,6 +74,9 @@ set nocompatible
 
     set scrolloff=2 "Always keep a distance of two lines when scrolling
 
+    " Quickly switch between windows
+    nnoremap <tab> <c-w><c-w>
+
     " Navigate wrapped lines more conveniently
     map j gj
     map k gk

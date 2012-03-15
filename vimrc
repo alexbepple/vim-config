@@ -77,8 +77,8 @@ set nocompatible
 " Comments
     Bundle 'scrooloose/nerdcommenter'
 
-    nnoremap <silent> zz :call NERDComment(0, "toggle")<cr>
-    vnoremap <silent> zz <ESC>:call NERDComment(1, "toggle")<cr>
+    nnoremap <silent> zz :call NERDComment("n", "toggle")<cr>
+    vnoremap <silent> zz <ESC>:call NERDComment("v", "toggle")<cr>
 
 
 " Moving around

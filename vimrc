@@ -72,6 +72,7 @@ set nocompatible
     call s:fuf_exclude(s:fuf_defaults)
     call s:fuf_exclude('\.(png|DS_Store|gitkeep)')
     call s:fuf_exclude_dir('vendor')
+    call s:fuf_exclude_dir('tmp')
 
 
 " Comments

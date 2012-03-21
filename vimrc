@@ -202,6 +202,10 @@ set nocompatible
     set autowrite
 
 
+" Project-specific settings
+    Bundle 'mantiz/vim-plugin-dirsettings'
+
+
 " Close current buffer – or window when there are no buffers left
     function! NumberOfBuffers()
         let buffers = range(1, bufnr('$'))

@@ -104,7 +104,6 @@ set nocompatible
 
 " Git
     Bundle 'tpope/vim-fugitive'
-    Bundle 'gregsexton/gitv'
 
 
 " Wrap lines

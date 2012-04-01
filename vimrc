@@ -173,22 +173,10 @@ set nocompatible
 " Surround with
     Bundle 'tpope/vim-surround'
 
-    vnoremap <leader>ed :call EncloseSelectionWith('“', '”')<cr>
-    vnoremap <leader>gd :call EncloseSelectionWith('„', '“')<cr>
-    vnoremap <leader>< :call EncloseSelectionWith('«', '»')<cr>
-
-    function! ReplaceSelectionWith(replacement)
-        exe 'normal gvc'.a:replacement
-    endfunction
-    function! EncloseSelectionWith(prefix, ...)
-        let suffix = a:0 == 1 ? a:1 : a:prefix
-        let enclosedString = a:prefix.GetVisualText().suffix
-        call ReplaceSelectionWith(enclosedString)
-    endfunction
-    function! GetVisualText()
-        exe 'normal gvy'
-        return getreg('"')
-    endfunc
+    let g:surround_8216 = "‘\r’"
+    let g:surround_8222 = "„\r“"
+    let g:surround_8220 = "“\r”"
+    let g:surround_171  = "«\r»"
 
 
 " Quickly edit .vimrc

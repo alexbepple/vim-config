@@ -132,6 +132,8 @@ set nocompatible
     set wildmode=longest,full
     set wildignore+=*.pyc,*.class
 
+    inoremap <tab> <c-n>
+
 
 " Change modes more quickly
     nnoremap <space> :

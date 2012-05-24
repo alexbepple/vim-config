@@ -202,6 +202,8 @@ set nocompatible
     set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
     set noswapfile " The most annoying thing ever.
 
+    set autoread
+
     " Allow folder-specific vimrc files
     set exrc
 

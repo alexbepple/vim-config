@@ -46,15 +46,12 @@ set nocompatible
     " L9 is a dependency of FuzzyFinder
     Bundle 'L9'
 
-    nnoremap f<space> :FufBuffer<cr>
-    vnoremap f<space> <esc>:FufBuffer<cr>
-    nnoremap ff :FufFile<cr>
-    vnoremap ff <esc>:FufFile<cr>
-    nnoremap fr :FufRenewCache<cr>
-    nnoremap fj :FufJumpList<cr>
+    nnoremap <d-e> :FufBuffer<cr>
+    nnoremap 66 :FufFile<cr>
+    nnoremap 77 :FufFile **/<cr>
+    nnoremap <d-r> :FufRenewCache<cr>
     let g:fuf_keySwitchMatching = '<d-7>'
 
-    nnoremap 77 :FufFile **/<cr>
 
     function! s:fuf_exclude(pattern)
         if exists("g:fuf_file_exclude")

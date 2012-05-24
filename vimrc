@@ -128,7 +128,8 @@ set nocompatible
 
 
 " Completion settings
-    set wildmode=longest,list "Completes the longest common string, shows list on second press
+    set wildmenu
+    set wildmode=longest,full
     set wildignore+=*.pyc,*.class
 
 

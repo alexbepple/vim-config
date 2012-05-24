@@ -133,14 +133,7 @@ set nocompatible
 
 
 " Change modes more quickly
-    inoremap <s-space> <esc>
-    cnoremap <s-space> <c-c>
     nnoremap <space> :
-    vnoremap <space> <esc>
-
-    " Prevent accidental <F1> presses
-    map <f1> <esc>
-    imap <f1> <esc>
 
 
 " Moving lines
@@ -165,7 +158,6 @@ set nocompatible
 " Put and yank more conveniently
     nnoremap p p`[v`] 
     nnoremap P P`[v`] 
-    vnoremap y ygv
 
 " Surround with
     Bundle 'tpope/vim-surround'

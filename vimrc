@@ -214,6 +214,7 @@ set nocompatible
 
     Bundle 'msanders/snipmate.vim.git'
     Bundle 'sjl/gundo.vim'
+    Bundle 'godlygeek/tabular'
 
 
 " Ruby

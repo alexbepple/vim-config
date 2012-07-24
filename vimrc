@@ -24,7 +24,7 @@ set nocompatible
 " Search
     set incsearch
     set ignorecase
-    noremap // :set invhlsearch<cr>
+    noremap zz :set invhlsearch<cr>
 
     " Search for selection
     vnoremap g/ y/<C-R>"<CR>
@@ -75,8 +75,8 @@ set nocompatible
 " Comments
     Bundle 'scrooloose/nerdcommenter'
 
-    nnoremap <silent> zz :call NERDComment("n", "toggle")<cr>
-    vnoremap <silent> zz <ESC>:call NERDComment("v", "toggle")<cr>
+    nnoremap <silent> <d-/> :call NERDComment("n", "toggle")<cr>
+    vnoremap <silent> <d-/> <ESC>:call NERDComment("v", "toggle")<cr>
 
 
 " Moving around

@@ -7,3 +7,5 @@ macmenu Window.Select\ Next\ Tab key=<c-right>
 macmenu Window.Select\ Previous\ Tab key=<c-left>
 macmenu Edit.Font.Bigger key=<d-+>
 
+nnoremap <tab> :FufBuffer<cr>
+

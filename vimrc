@@ -233,8 +233,9 @@ set nocompatible
     let vimclojure#WantNailgun = 1
 
 
-" VSpec
+" misc file types
     Bundle 'kana/vim-vspec'
+    Bundle 'tpope/vim-markdown'
 
 
 " Pensieve

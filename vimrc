@@ -75,9 +75,6 @@ set nocompatible
 " Comments
     Bundle 'scrooloose/nerdcommenter'
 
-    nnoremap <silent> <d-/> :call NERDComment("n", "toggle")<cr>
-    vnoremap <silent> <d-/> <ESC>:call NERDComment("v", "toggle")<cr>
-
 
 " Moving around
     Bundle 'camelcasemotion'

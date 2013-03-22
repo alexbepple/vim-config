@@ -18,7 +18,7 @@ set nocompatible
 
 " Pathogen for local bundles
     Bundle 'tpope/vim-pathogen'
-    call pathogen#infect('local_bundle')
+    call pathogen#infect('local_bundle/{}')
 
 
 " Search

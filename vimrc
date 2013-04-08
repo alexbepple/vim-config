@@ -221,6 +221,8 @@ set nocompatible
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'
 
+    Bundle 'scrooloose/syntastic'
+
     Bundle 'majutsushi/tagbar'
     nmap <d-o> :TagbarOpen fj<cr>
 

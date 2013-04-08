@@ -1,14 +1,14 @@
 snippet describe
     describe('${1:what}', function() {
-        ${0:end}
+        ${0:TARGET}
     });
 
 snippet it
     it('${1:does what and when}', function() {
-        expect(${0:end})
+        expect(${0:TARGET})
     });
 
 snippet beforeEach
     beforeEach(function() {
-        ${0:end}
+        ${0:TARGET}
     });

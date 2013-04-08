@@ -210,6 +210,7 @@ set nocompatible
     nnoremap t @
 
     Bundle 'msanders/snipmate.vim.git'
+    Bundle 'Raimondi/delimitMate'
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'
 

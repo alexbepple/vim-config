@@ -27,7 +27,7 @@ set nocompatible
     noremap zz :set invhlsearch<cr>
 
     " Search for selection
-    vnoremap g/ y/<C-R>"<CR>
+    vnoremap g/ y/<c-r>"<cr>
 
     Bundle 'alexbepple/ack.vim'
     let g:ack_list_height=40
@@ -209,7 +209,14 @@ set nocompatible
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @
 
-    Bundle 'msanders/snipmate.vim.git'
+    Bundle 'Shougo/neocomplcache'
+    let g:neocomplcache_enable_at_startup = 1
+
+    Bundle 'Shougo/neosnippet'
+    let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
+    imap <C-k> <plug>(neosnippet_expand_or_jump)
+    imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "\<tab>"
+
     Bundle 'Raimondi/delimitMate'
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'

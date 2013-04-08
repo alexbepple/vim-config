@@ -214,8 +214,8 @@ set nocompatible
 
     Bundle 'Shougo/neosnippet'
     let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
-    imap <C-k> <plug>(neosnippet_expand_or_jump)
     imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "\<tab>"
+    vmap <s-z> <Plug>(neosnippet_expand_target)
 
     Bundle 'Raimondi/delimitMate'
     Bundle 'sjl/gundo.vim'

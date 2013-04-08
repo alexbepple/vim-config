@@ -244,7 +244,9 @@ set nocompatible
 " misc file types
     Bundle 'kana/vim-vspec'
     Bundle 'tpope/vim-markdown'
+
     Bundle 'pangloss/vim-javascript'
+    imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;<cr>' : ''
 
 
 " Pensieve

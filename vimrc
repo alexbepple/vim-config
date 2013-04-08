@@ -221,6 +221,9 @@ set nocompatible
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'
 
+    Bundle 'majutsushi/tagbar'
+    nmap <d-o> :TagbarOpen fj<cr>
+
 
 " Ruby
     " Select Ruby blocks

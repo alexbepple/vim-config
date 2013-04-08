@@ -9,3 +9,4 @@ macmenu Edit.Font.Bigger key=<d-+>
 
 nnoremap <tab> :FufBuffer<cr>
 
+macmenu File.Open\.\.\. key=<nop>

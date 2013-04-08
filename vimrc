@@ -226,6 +226,8 @@ set nocompatible
     Bundle 'majutsushi/tagbar'
     nmap <d-o> :TagbarOpen fj<cr>
 
+    Bundle 'editorconfig/editorconfig-vim'
+
 
 " Ruby
     " Select Ruby blocks

@@ -236,6 +236,7 @@ set nocompatible
 " misc file types
     Bundle 'kana/vim-vspec'
     Bundle 'tpope/vim-markdown'
+    Bundle 'pangloss/vim-javascript'
 
 
 " Pensieve

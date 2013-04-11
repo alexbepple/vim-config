@@ -255,6 +255,9 @@ set nocompatible
     Bundle 'pangloss/vim-javascript'
     imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;' : ''
 
+    autocmd FileType make set noexpandtab
+    au BufEnter Makefile set filetype=make
+
 
 " Pensieve
     command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc

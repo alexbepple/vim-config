@@ -253,7 +253,7 @@ set nocompatible
     Bundle 'tpope/vim-markdown'
 
     Bundle 'pangloss/vim-javascript'
-    imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;<cr>' : ''
+    imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;' : ''
 
 
 " Pensieve

@@ -254,6 +254,9 @@ set nocompatible
 
     Bundle 'pangloss/vim-javascript'
     imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;' : ''
+    au BufRead,BufNewFile .jshintrc set filetype=json
+
+    Bundle 'elzr/vim-json'
 
     autocmd FileType make set noexpandtab
     au BufEnter Makefile set filetype=make

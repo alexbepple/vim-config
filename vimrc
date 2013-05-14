@@ -252,7 +252,7 @@ set nocompatible
 
 " JavaScript
     Bundle 'pangloss/vim-javascript'
-    imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;' : ''
+    autocmd FileType javascript imap <d-cr> <esc>A;
     au BufRead,BufNewFile .jshintrc set filetype=json
 
 
@@ -266,7 +266,10 @@ set nocompatible
     Bundle 'kana/vim-vspec'
     Bundle 'tpope/vim-markdown'
     Bundle 'elzr/vim-json'
+
+    " PHP
     Bundle 'StanAngeloff/php.vim'
+    autocmd FileType php imap <d-cr> <esc>A;
 
 
 " Pensieve

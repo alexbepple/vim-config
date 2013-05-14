@@ -229,6 +229,13 @@ set nocompatible
     Bundle 'editorconfig/editorconfig-vim'
 
     Bundle 'michaeljsmith/vim-indent-object'
+    
+    Bundle 'vim-scripts/EasyGrep'
+
+    " For local replace
+    nnoremap gr gd[{V%:s/<C-R>///gc<left><left><left>
+    " For global replace
+    nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 
 " Ruby

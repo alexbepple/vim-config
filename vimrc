@@ -261,6 +261,8 @@ set nocompatible
     autocmd FileType make set noexpandtab
     au BufEnter Makefile set filetype=make
 
+    Bundle 'StanAngeloff/php.vim'
+
 
 " Pensieve
     command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc

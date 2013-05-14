@@ -228,6 +228,8 @@ set nocompatible
 
     Bundle 'editorconfig/editorconfig-vim'
 
+    Bundle 'michaeljsmith/vim-indent-object'
+
 
 " Ruby
     " Select Ruby blocks
@@ -248,22 +250,23 @@ set nocompatible
     let vimclojure#WantNailgun = 1
 
 
-" misc file types
-    Bundle 'kana/vim-vspec'
-    Bundle 'tpope/vim-markdown'
-
+" JavaScript
     Bundle 'pangloss/vim-javascript'
     imap <expr> <d-cr> &filetype=~'javascript' ? '<c-g>g;' : ''
     au BufRead,BufNewFile .jshintrc set filetype=json
 
-    Bundle 'elzr/vim-json'
 
+" Makefiles
+    " Makefiles do not like spaces instead of tabs
     autocmd FileType make set noexpandtab
     au BufEnter Makefile set filetype=make
 
-    Bundle 'StanAngeloff/php.vim'
 
-    Bundle 'michaeljsmith/vim-indent-object'
+" misc file types
+    Bundle 'kana/vim-vspec'
+    Bundle 'tpope/vim-markdown'
+    Bundle 'elzr/vim-json'
+    Bundle 'StanAngeloff/php.vim'
 
 
 " Pensieve

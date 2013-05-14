@@ -263,6 +263,8 @@ set nocompatible
 
     Bundle 'StanAngeloff/php.vim'
 
+    Bundle 'michaeljsmith/vim-indent-object'
+
 
 " Pensieve
     command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc

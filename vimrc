@@ -78,6 +78,10 @@ set nocompatible
 
 " Moving around
     Bundle 'camelcasemotion'
+    map w <Plug>CamelCaseMotion_w
+    map b <Plug>CamelCaseMotion_b
+    map e <Plug>CamelCaseMotion_e
+
     Bundle 'Lokaltog/vim-easymotion'
 
     " Faster paging

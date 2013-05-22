@@ -171,8 +171,8 @@ set nocompatible
 
 
 " Quickly edit .vimrc
-    nnoremap <leader>ev :edit ~/computing/vim/vimrc<cr>
-    nnoremap <leader>sv :up<cr>:source %<cr>
+    nnoremap <leader>ve :edit ~/computing/vim/vimrc<cr>
+    nnoremap <leader>v! :up<cr>:source %<cr>
 
 
 " Automatically save everything when losing focus

@@ -123,6 +123,8 @@ set nocompatible
     colorscheme solarized
     set cursorline "Highlight the line the cursor is on
 
+    Bundle 'Lokaltog/vim-distinguished'
+
 
 " Completion settings
     set wildmenu

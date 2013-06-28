@@ -203,6 +203,12 @@ set nocompatible
     nnoremap <d-w> :call CloseCurrent()<cr>
 
 
+" check syntax
+    Bundle 'scrooloose/syntastic'
+    let g:syntastic_error_symbol='✗'
+    let g:syntastic_warning_symbol='⚠'
+
+
 " Misc
     set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
     set noswapfile " The most annoying thing ever.
@@ -223,11 +229,10 @@ set nocompatible
     imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "\<tab>"
     vmap <s-z> <Plug>(neosnippet_expand_target)
 
+    " automatically close pairwise symbols
     Bundle 'Raimondi/delimitMate'
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'
-
-    Bundle 'scrooloose/syntastic'
 
     Bundle 'majutsushi/tagbar'
     nmap <d-o> :TagbarOpen fj<cr>

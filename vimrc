@@ -294,6 +294,10 @@ set nocompatible
     command! -range=% RemoveSlashes :<line1>,<line2>s/\/\///gc
     command! -range=% FixLinebreaks :<line1>,<line2>s/\r//
     command! -range=% ReplaceAsterisksWithIndents :<line1>,<line2>s/^\* /    /c
+    
+    " tasks
+    nnoremap ++ I☐ <esc>
+    nnoremap ## ^vc✓<esc>
 
 
 " The plugin managers need to toggle the filetype plugin off and back on

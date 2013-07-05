@@ -67,6 +67,7 @@ set nocompatible
     " I know of no way to append my exclusions to the defaults. :(
     let s:fuf_defaults = '\v\~$|\.(o|exe|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
     call s:fuf_exclude(s:fuf_defaults)
+    call s:fuf_exclude('\.d')
     call s:fuf_exclude('\.(png|DS_Store|gitkeep)')
     call s:fuf_exclude_dir('vendor')
     call s:fuf_exclude_dir('tmp')

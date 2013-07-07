@@ -41,7 +41,10 @@ set nocompatible
     set autoindent
 
 
-" Snappily open stuff
+" Navigate from file to file
+
+    Bundle 'scrooloose/nerdtree'
+
     Bundle 'FuzzyFinder'
     " L9 is a dependency of FuzzyFinder
     Bundle 'L9'

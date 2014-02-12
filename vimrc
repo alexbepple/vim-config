@@ -56,24 +56,26 @@ set nocompatible
     let g:fuf_keySwitchMatching = '<d-7>'
 
 
-    function! s:fuf_exclude(pattern)
+    function! g:fuf_exclude(pattern)
         if exists("g:fuf_file_exclude")
             let g:fuf_file_exclude = g:fuf_file_exclude . "|" . a:pattern
         else
             let g:fuf_file_exclude = a:pattern
         endif
     endfunction
-    function! s:fuf_exclude_dir(dirname)
-        call s:fuf_exclude('(^|[/\\])' . a:dirname . '($|[/\\])')
+    function! g:fuf_exclude_dir(dirname)
+        call g:fuf_exclude('(^|[/\\])' . a:dirname . '($|[/\\])')
     endfunction
 
     " I know of no way to append my exclusions to the defaults. :(
     let s:fuf_defaults = '\v\~$|\.(o|exe|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-    call s:fuf_exclude(s:fuf_defaults)
-    call s:fuf_exclude('\.d')
-    call s:fuf_exclude('\.(png|DS_Store|gitkeep)')
-    call s:fuf_exclude_dir('vendor')
-    call s:fuf_exclude_dir('tmp')
+    call g:fuf_exclude(s:fuf_defaults)
+    call g:fuf_exclude('\.d')
+    call g:fuf_exclude('\.(png|DS_Store|gitkeep)')
+    call g:fuf_exclude_dir('vendor')
+    call g:fuf_exclude_dir('tmp')
+    call g:fuf_exclude('node_modules')
+    call g:fuf_exclude('public/lib')
 
 
 " Comments
@@ -276,6 +278,11 @@ set nocompatible
     Bundle 'pangloss/vim-javascript'
     autocmd FileType javascript imap <d-cr> <esc>A;
     au BufRead,BufNewFile .jshintrc set filetype=json
+
+
+" CoffeeScript
+	Bundle 'kchmck/vim-coffee-script'
+    let coffee_linter = '/Users/ab/engagements/c4e/node_modules/.bin/coffeelint'
 
 
 " Makefiles

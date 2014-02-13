@@ -1,6 +1,7 @@
 set lines=80 columns=85
 set guifont=Consolas\ 9
 set guioptions-=T
+set linespace=3
 
 macmenu File.Close key=<nop>
 macmenu Window.Select\ Next\ Tab key=<c-right>

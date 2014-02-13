@@ -129,11 +129,12 @@ set nocompatible
 
 " Appearance
     Bundle 'altercation/vim-colors-solarized'
+    Bundle 'Lokaltog/vim-distinguished'
+
     set background=dark
-    colorscheme solarized
     set cursorline "Highlight the line the cursor is on
 
-    Bundle 'Lokaltog/vim-distinguished'
+    colorscheme smyck
 
 
 " Completion settings

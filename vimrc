@@ -48,6 +48,7 @@ set nocompatible
 
     Bundle 'kien/ctrlp.vim'
     let g:ctrlp_match_window = 'order:ttb,max:20'
+    let g:ctrlp_use_caching = 0
     set wildignore+=*/node_modules/*
       let g:ctrlp_user_command = {
     \ 'types': {

@@ -44,6 +44,7 @@ set nocompatible
 " Navigate from file to file
 
     Bundle 'scrooloose/nerdtree'
+    nnoremap <d-e> :NERDTreeFind<cr>
 
     Bundle 'kien/ctrlp.vim'
     let g:ctrlp_match_window = 'order:ttb,max:20'

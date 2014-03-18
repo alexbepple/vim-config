@@ -45,37 +45,25 @@ set nocompatible
 
     Bundle 'scrooloose/nerdtree'
 
+    Bundle 'kien/ctrlp.vim'
+    let g:ctrlp_match_window = 'order:ttb,max:20'
+    set wildignore+=*/node_modules/*
+      let g:ctrlp_user_command = {
+    \ 'types': {
+      \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
+      \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
+    nnoremap <tab> :CtrlPBuffer<cr>
+
+
     Bundle 'FuzzyFinder'
     " L9 is a dependency of FuzzyFinder
     Bundle 'L9'
 
-    nnoremap <d-e> :FufBuffer<cr>
     nnoremap 66 :FufFile<cr>
     nnoremap 77 :FufFile **/<cr>
     nnoremap <d-r> :FufRenewCache<cr>
-    let g:fuf_keySwitchMatching = '<d-7>'
-
-
-    function! g:fuf_exclude(pattern)
-        if exists("g:fuf_file_exclude")
-            let g:fuf_file_exclude = g:fuf_file_exclude . "|" . a:pattern
-        else
-            let g:fuf_file_exclude = a:pattern
-        endif
-    endfunction
-    function! g:fuf_exclude_dir(dirname)
-        call g:fuf_exclude('(^|[/\\])' . a:dirname . '($|[/\\])')
-    endfunction
-
-    " I know of no way to append my exclusions to the defaults. :(
-    let s:fuf_defaults = '\v\~$|\.(o|exe|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-    call g:fuf_exclude(s:fuf_defaults)
-    call g:fuf_exclude('\.d')
-    call g:fuf_exclude('\.(png|DS_Store|gitkeep)')
-    call g:fuf_exclude_dir('vendor')
-    call g:fuf_exclude_dir('tmp')
-    call g:fuf_exclude('node_modules')
-    call g:fuf_exclude('public/lib')
 
 
 " Comments

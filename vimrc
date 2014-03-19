@@ -272,7 +272,7 @@ set nocompatible
 " JavaScript
     Bundle 'pangloss/vim-javascript'
     autocmd FileType javascript imap <d-cr> <esc>A;
-    au BufRead,BufNewFile .jshintrc set filetype=json
+    au BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
 
 " CoffeeScript

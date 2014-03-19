@@ -49,22 +49,27 @@ set nocompatible
     Bundle 'kien/ctrlp.vim'
     let g:ctrlp_match_window = 'order:ttb,max:20'
     let g:ctrlp_use_caching = 0
-    let g:ctrlp_user_command = {
-    \ 'types': {
-      \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
-      \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
+
+    function! FindMostRelevantFiles()
+        if exists("b:ctrlp_user_command")
+            unlet b:ctrlp_user_command
+        endif
+        let b:ctrlp_user_command = {
+        \ 'types': {
+          \ 1: ['.git', 'cd %s && git ls-files'],
+          \ },
+        \ }
+    endfunction
+    function! FindAllFiles()
+        if exists("b:ctrlp_user_command")
+            unlet b:ctrlp_user_command
+        endif
+        let b:ctrlp_user_command = 'find %s -type f'
+    endfunction
+
+    nnoremap 66 :call FindAllFiles()<cr>:CtrlP<cr>
+    nnoremap 77 :call FindMostRelevantFiles()<cr>:CtrlP<cr>
     nnoremap <tab> :CtrlPBuffer<cr>
-
-
-    Bundle 'FuzzyFinder'
-    " L9 is a dependency of FuzzyFinder
-    Bundle 'L9'
-
-    nnoremap 66 :FufFile<cr>
-    nnoremap 77 :FufFile **/<cr>
-    nnoremap <d-r> :FufRenewCache<cr>
 
 
 " Comments

@@ -251,6 +251,8 @@ set nocompatible
     " For global replace
     nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
+    Bundle 'tpope/vim-repeat'
+
 
 " Ruby
     " Select Ruby blocks

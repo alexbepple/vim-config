@@ -9,3 +9,6 @@ macmenu Window.Select\ Previous\ Tab key=<c-left>
 macmenu Edit.Font.Bigger key=<d-+>
 
 macmenu File.Open\.\.\. key=<nop>
+
+nnoremap ' cs"'<cr>
+

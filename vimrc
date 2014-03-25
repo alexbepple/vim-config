@@ -174,6 +174,8 @@ set nocompatible
     let g:surround_8220 = "“\r”"
     let g:surround_171  = "«\r»"
 
+    nnoremap ' :cs"'<cr>
+
 
 " Quickly edit .vimrc
     nnoremap <leader>ve :edit ~/computing/vim/vimrc<cr>
@@ -272,6 +274,8 @@ set nocompatible
 " JavaScript
     Bundle 'pangloss/vim-javascript'
     autocmd FileType javascript imap <d-cr> <esc>A;
+
+    Bundle 'elzr/vim-json'
     au BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
 
@@ -279,6 +283,8 @@ set nocompatible
 	Bundle 'kchmck/vim-coffee-script'
     let coffee_linter = '/usr/local/share/npm/bin/coffeelint'
     au BufEnter *.cson set filetype=coffee
+    nnoremap <leader>co :CoffeeCompile<cr>
+    vnoremap <leader>co :CoffeeCompile<cr>
 
 
 " Makefiles
@@ -290,7 +296,6 @@ set nocompatible
 " misc file types
     Bundle 'kana/vim-vspec'
     Bundle 'tpope/vim-markdown'
-    Bundle 'elzr/vim-json'
 
     " PHP
     Bundle 'StanAngeloff/php.vim'

@@ -277,7 +277,8 @@ set nocompatible
 
 " CoffeeScript
 	Bundle 'kchmck/vim-coffee-script'
-    let coffee_linter = '/Users/ab/engagements/c4e/node_modules/.bin/coffeelint'
+    let coffee_linter = '/usr/local/share/npm/bin/coffeelint'
+    au BufEnter *.cson set filetype=coffee
 
 
 " Makefiles

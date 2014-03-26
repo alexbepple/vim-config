@@ -29,9 +29,13 @@ set nocompatible
     " Search for selection
     vnoremap g/ y/<c-r>"<cr>
 
-    Bundle 'alexbepple/ack.vim'
-    let g:ack_list_height=40
-
+    Bundle 'rking/ag.vim'
+    let g:ag_qhandler='botright copen 30'
+    let g:ag_mapping_message=0
+    let g:agprg="ag --smart-case"
+    let g:agformat="%f:%l:%m"
+    nnoremap -f :Ag!
+    
 
 " Tabbing
     set shiftwidth=4

@@ -1,5 +1,5 @@
 set lines=80 columns=85
-set guifont=Consolas\ 9
+set guifont=Inconsolata-dz\ 9
 set guioptions-=T
 set linespace=3
 

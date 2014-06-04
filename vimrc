@@ -34,7 +34,7 @@ set nocompatible
     let g:ag_mapping_message=0
     let g:agprg="ag --smart-case --hidden"
     let g:agformat="%f:%l:%m"
-    nnoremap -f :Ag!
+    nnoremap -f :Ag! 
     
 
 " Tabbing

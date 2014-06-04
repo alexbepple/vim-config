@@ -32,7 +32,7 @@ set nocompatible
     Bundle 'rking/ag.vim'
     let g:ag_qhandler='botright copen 30'
     let g:ag_mapping_message=0
-    let g:agprg="ag --smart-case"
+    let g:agprg="ag --smart-case --hidden"
     let g:agformat="%f:%l:%m"
     nnoremap -f :Ag!
     

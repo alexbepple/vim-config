@@ -128,11 +128,12 @@ set nocompatible
 " Appearance
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'Lokaltog/vim-distinguished'
+    Bundle 'chriskempson/vim-tomorrow-theme'
 
     set background=dark
     set cursorline "Highlight the line the cursor is on
 
-    colorscheme smyck
+    colorscheme Tomorrow-Night
 
 
 " Completion settings

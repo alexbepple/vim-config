@@ -104,10 +104,6 @@ set nocompatible
     map $ g$
 
 
-" Git
-    Bundle 'tpope/vim-fugitive'
-
-
 " Wrap lines
     set linebreak "Only wrap at sensible points
     "How wrapped lines should begin

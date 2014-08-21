@@ -104,6 +104,13 @@ set nocompatible
     map $ g$
 
 
+" Folding
+    set foldmethod=indent
+
+    " Toggle folds
+    nnoremap <space> za
+
+
 " Wrap lines
     set linebreak "Only wrap at sensible points
     "How wrapped lines should begin
@@ -138,10 +145,6 @@ set nocompatible
     set wildignore+=*.pyc,*.class
 
     inoremap <tab> <c-n>
-
-
-" Change modes more quickly
-    nnoremap <space> :
 
 
 " Moving lines
@@ -221,7 +224,7 @@ set nocompatible
 
     " Allow folder-specific vimrc files
     set exrc
-
+    
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @
 

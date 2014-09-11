@@ -32,13 +32,14 @@ set nocompatible
     Bundle 'rking/ag.vim'
     let g:ag_qhandler='botright copen 30'
     let g:ag_mapping_message=0
-    let g:agprg="ag --smart-case --hidden --ignore .git"
+    let g:agprg="git grep --line-number --ignore-case"
     let g:agformat="%f:%l:%m"
-    nnoremap -F :Ag! 
+    nnoremap -f :Ag! 
 
+    Bundle 'vim-scripts/EasyGrep'
     let g:EasyGrepCommand=1
-    set grepprg=git\ grep\ --line-number
-    nnoremap -f :Grep 
+    set grepprg=ag\ --smart-case\ --hidden\ --ignore\ .git
+    nnoremap -F :Grep 
     
 
 " Tabbing
@@ -254,8 +255,6 @@ set nocompatible
 
     Bundle 'michaeljsmith/vim-indent-object'
     
-    Bundle 'vim-scripts/EasyGrep'
-
     " For local replace
     nnoremap gr gd[{V%:s/<C-R>///gc<left><left><left>
     " For global replace

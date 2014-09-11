@@ -34,7 +34,11 @@ set nocompatible
     let g:ag_mapping_message=0
     let g:agprg="ag --smart-case --hidden --ignore .git"
     let g:agformat="%f:%l:%m"
-    nnoremap -f :Ag! 
+    nnoremap -F :Ag! 
+
+    let g:EasyGrepCommand=1
+    set grepprg=git\ grep\ --line-number
+    nnoremap -f :Grep 
     
 
 " Tabbing

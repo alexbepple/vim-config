@@ -221,6 +221,8 @@ set nocompatible
 
 
 " Misc
+    nnoremap M :on<cr>
+
     set hidden " Hide buffers, instead of closing. Enables unwritten changes, preserves undo.
     set noswapfile " The most annoying thing ever.
 

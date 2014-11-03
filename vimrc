@@ -111,6 +111,8 @@ set nocompatible
 
 " Folding
     set foldmethod=indent
+    au BufWinLeave * mkview
+    au BufWinEnter * silent loadview
 
     " Toggle folds
     nnoremap <space> za

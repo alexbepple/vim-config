@@ -109,15 +109,6 @@ set nocompatible
     map $ g$
 
 
-" Folding
-    set foldmethod=indent
-    au BufWinLeave *.* mkview
-    au BufWinEnter *.* silent loadview
-
-    " Toggle folds
-    nnoremap <space> za
-
-
 " Wrap lines
     set linebreak "Only wrap at sensible points
     "How wrapped lines should begin

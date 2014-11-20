@@ -291,6 +291,13 @@ set nocompatible
     vnoremap <leader>co :CoffeeCompile<cr>
 
 
+" LiveScript
+	Bundle 'gkz/vim-ls'
+    let livescript_compiler = './node_modules/.bin/lsc'	
+    nnoremap <leader>co :LiveScriptCompile<cr>
+    vnoremap <leader>co :LiveScriptCompile<cr>
+
+
 " Makefiles
     " Makefiles do not like spaces instead of tabs
     autocmd FileType make set noexpandtab

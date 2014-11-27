@@ -249,7 +249,7 @@ set nocompatible
     Bundle 'michaeljsmith/vim-indent-object'
     
     " For local replace
-    nnoremap gr gd[{V%:s/<C-R>///gc<left><left><left>
+    nmap gr vai:s/<C-R>///gc<left><left><left>
     " For global replace
     nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 

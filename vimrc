@@ -142,8 +142,6 @@ set nocompatible
     set wildmode=longest,full
     set wildignore+=*.pyc,*.class
 
-    inoremap <tab> <c-n>
-
 
 " Moving lines
     " <a-j>
@@ -233,11 +231,14 @@ set nocompatible
 
     Bundle 'Shougo/neosnippet'
     let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
-    imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "\<tab>"
     vmap <s-z> <Plug>(neosnippet_expand_target)
 
     " automatically close pairwise symbols
     Bundle 'Raimondi/delimitMate'
+
+    imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "<Plug>delimitMateS-Tab"
+    imap <s-tab> <Plug>delimitMateS-Tab
+
     Bundle 'sjl/gundo.vim'
     Bundle 'godlygeek/tabular'
 

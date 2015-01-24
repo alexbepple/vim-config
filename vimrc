@@ -249,9 +249,9 @@ set nocompatible
     Bundle 'michaeljsmith/vim-indent-object'
     
     " For local replace
-    nmap gr vai:s/<C-R>///gc<left><left><left>
+    nmap gr viwyvai:s/<C-R>"//gc<left><left><left>
     " For global replace
-    nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+    nnoremap gR viwy:%s/<C-R>"//gc<left><left><left>
 
     Bundle 'tpope/vim-repeat'
 

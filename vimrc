@@ -298,6 +298,8 @@ set nocompatible
     nnoremap <leader>co :LiveScriptCompile<cr>
     vnoremap <leader>co :LiveScriptCompile<cr>
 
+" CSS
+    Plugin 'JulesWang/css.vim'
 
 " Makefiles
     " Makefiles do not like spaces instead of tabs

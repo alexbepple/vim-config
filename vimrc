@@ -257,6 +257,10 @@ set nocompatible
     Bundle 'tpope/vim-repeat'
 
 
+""""""""""""""
+" file types
+""""""""""""""
+
 " Ruby
     " Select Ruby blocks
     Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -313,12 +317,14 @@ set nocompatible
     Bundle 'tpope/vim-markdown'
     autocmd FileType markdown command! -range=% Marked :!open -a marked '%'
 
+" PHP
+    Bundle 'StanAngeloff/php.vim'
+    autocmd FileType php imap <d-cr> <esc>A;
+
+
 " misc file types
     Bundle 'kana/vim-vspec'
 
-    " PHP
-    Bundle 'StanAngeloff/php.vim'
-    autocmd FileType php imap <d-cr> <esc>A;
 
 
 " Pensieve
@@ -330,6 +336,10 @@ set nocompatible
     nnoremap ++ I☐ <esc>
     nnoremap ## ^vc✓<esc>
 
+
+""""""""""""""
+" last words
+""""""""""""""
 
 " The plugin managers need to toggle the filetype plugin off and back on
     filetype off

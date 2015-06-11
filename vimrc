@@ -301,6 +301,9 @@ set nocompatible
 " CSS
     Plugin 'JulesWang/css.vim'
 
+" Jade
+    Plugin 'digitaltoad/vim-jade'
+
 " Makefiles
     " Makefiles do not like spaces instead of tabs
     autocmd FileType make set noexpandtab

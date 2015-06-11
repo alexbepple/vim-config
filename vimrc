@@ -309,10 +309,12 @@ set nocompatible
     autocmd FileType make set noexpandtab
     au BufEnter Makefile set filetype=make
 
+" Markdown
+    Bundle 'tpope/vim-markdown'
+    autocmd FileType markdown command! -range=% Marked :!open -a marked '%'
 
 " misc file types
     Bundle 'kana/vim-vspec'
-    Bundle 'tpope/vim-markdown'
 
     " PHP
     Bundle 'StanAngeloff/php.vim'

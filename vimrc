@@ -1,11 +1,11 @@
 set nocompatible
 
 " Init Vundle
-    set rtp+=~/.vim/bundle/vundle/
+    set rtp+=~/.vim/bundle/Vundle.vim/
     call vundle#rc()
     
     " Manage Vundle with Vundle
-    Bundle 'gmarik/vundle'
+    Plugin 'VundleVim/Vundle.vim'
 
 
 " Leaders – as they may affect almost any plugin, they should be first
@@ -17,7 +17,7 @@ set nocompatible
 
 
 " Pathogen for local bundles
-    Bundle 'tpope/vim-pathogen'
+    Plugin 'tpope/vim-pathogen'
     call pathogen#infect('local_bundle/{}')
 
 
@@ -29,14 +29,14 @@ set nocompatible
     " Search for selection
     vnoremap g/ y/<c-r>"<cr>
 
-    Bundle 'rking/ag.vim'
+    Plugin 'rking/ag.vim'
     let g:ag_qhandler='botright copen 30'
     let g:ag_mapping_message=0
     let g:agprg="git grep --line-number --ignore-case"
     let g:agformat="%f:%l:%m"
     nnoremap -f :Ag! 
 
-    Bundle 'vim-scripts/EasyGrep'
+    Plugin 'vim-scripts/EasyGrep'
     let g:EasyGrepCommand=1
     set grepprg=ag\ --smart-case\ --hidden\ --ignore\ .git
     nnoremap -F :Grep 
@@ -52,7 +52,7 @@ set nocompatible
 
 " Navigate from file to file
 
-    Bundle 'kien/ctrlp.vim'
+    Plugin 'kien/ctrlp.vim'
     let g:ctrlp_match_window = 'order:ttb,max:20'
     let g:ctrlp_use_caching = 0
 
@@ -79,16 +79,16 @@ set nocompatible
 
 
 " Comments
-    Bundle 'scrooloose/nerdcommenter'
+    Plugin 'scrooloose/nerdcommenter'
 
 
 " Moving around
-    Bundle 'camelcasemotion'
+    Plugin 'camelcasemotion'
     map w <Plug>CamelCaseMotion_w
     map b <Plug>CamelCaseMotion_b
     map e <Plug>CamelCaseMotion_e
 
-    Bundle 'Lokaltog/vim-easymotion'
+    Plugin 'Lokaltog/vim-easymotion'
 
     " Faster paging
     nnoremap <d-k> <pageup>
@@ -124,9 +124,9 @@ set nocompatible
 
 
 " Appearance
-    Bundle 'altercation/vim-colors-solarized'
-    Bundle 'Lokaltog/vim-distinguished'
-    Bundle 'chriskempson/vim-tomorrow-theme'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'Lokaltog/vim-distinguished'
+    Plugin 'chriskempson/vim-tomorrow-theme'
 
     set background=dark
     set cursorline "Highlight the line the cursor is on
@@ -164,7 +164,7 @@ set nocompatible
     nnoremap P P`[v`] 
 
 " Surround with
-    Bundle 'tpope/vim-surround'
+    Plugin 'tpope/vim-surround'
 
     let g:surround_8216 = "‘\r’"
     let g:surround_8222 = "„\r“"
@@ -185,7 +185,7 @@ set nocompatible
 
 
 " check syntax
-    Bundle 'scrooloose/syntastic'
+    Plugin 'scrooloose/syntastic'
     let g:syntastic_error_symbol='✗'
     let g:syntastic_warning_symbol='⚠'
 
@@ -204,35 +204,35 @@ set nocompatible
     " I have blocked the normal way of playing macros. This is the new one.
     nnoremap t @
 
-    Bundle 'Shougo/neocomplcache'
+    Plugin 'Shougo/neocomplcache'
     let g:neocomplcache_enable_at_startup = 1
 
-    Bundle 'Shougo/neosnippet'
+    Plugin 'Shougo/neosnippet'
     let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
     vmap <s-z> <Plug>(neosnippet_expand_target)
 
     " automatically close pairwise symbols
-    Bundle 'Raimondi/delimitMate'
+    Plugin 'Raimondi/delimitMate'
 
     imap <expr><tab> neosnippet#expandable_or_jumpable() ? "\<plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<c-n>" : "<Plug>delimitMateS-Tab"
     imap <s-tab> <Plug>delimitMateS-Tab
 
-    Bundle 'sjl/gundo.vim'
-    Bundle 'godlygeek/tabular'
+    Plugin 'sjl/gundo.vim'
+    Plugin 'godlygeek/tabular'
 
-    Bundle 'majutsushi/tagbar'
+    Plugin 'majutsushi/tagbar'
     nmap <d-o> :TagbarOpen fj<cr>
 
-    Bundle 'editorconfig/editorconfig-vim'
+    Plugin 'editorconfig/editorconfig-vim'
 
-    Bundle 'michaeljsmith/vim-indent-object'
+    Plugin 'michaeljsmith/vim-indent-object'
     
     " For local replace
     nmap gr viwyvai:s/<c-r>"/<c-r>"/gc<left><left><left>
     " For global replace
     nnoremap gR viwy:%s/<c-r>"/<c-r>"/gc<left><left><left>
 
-    Bundle 'tpope/vim-repeat'
+    Plugin 'tpope/vim-repeat'
 
 
 """"""""""""""
@@ -241,17 +241,17 @@ set nocompatible
 
 " Ruby
     " Select Ruby blocks
-    Bundle 'nelstrom/vim-textobj-rubyblock'
-    Bundle 'kana/vim-textobj-user'
+    Plugin 'nelstrom/vim-textobj-rubyblock'
+    Plugin 'kana/vim-textobj-user'
     runtime macros/matchit.vim
 
-    Bundle 'tpope/vim-cucumber'
+    Plugin 'tpope/vim-cucumber'
 
-    Bundle 'tpope/vim-rails'
+    Plugin 'tpope/vim-rails'
 
 
 " Clojure
-    Bundle 'VimClojure'
+    Plugin 'VimClojure'
     let g:vimclojure#ParenRainbow = 1
     let g:vimclojure#DynamicHighlighting = 1
 
@@ -259,15 +259,15 @@ set nocompatible
 
 
 " JavaScript
-    Bundle 'pangloss/vim-javascript'
+    Plugin 'pangloss/vim-javascript'
     autocmd FileType javascript imap <d-cr> <esc>A;
 
-    Bundle 'elzr/vim-json'
+    Plugin 'elzr/vim-json'
     au BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
 
 " CoffeeScript
-	Bundle 'kchmck/vim-coffee-script'
+	Plugin 'kchmck/vim-coffee-script'
     let coffee_linter = '/usr/local/share/npm/bin/coffeelint'
     au BufEnter *.cson set filetype=coffee
     nnoremap <leader>co :CoffeeCompile<cr>
@@ -275,7 +275,7 @@ set nocompatible
 
 
 " LiveScript
-	Bundle 'gkz/vim-ls'
+	Plugin 'gkz/vim-ls'
     let livescript_compiler = './node_modules/.bin/lsc'	
     nnoremap <leader>co :LiveScriptCompile<cr>
     vnoremap <leader>co :LiveScriptCompile<cr>
@@ -292,16 +292,16 @@ set nocompatible
     au BufEnter Makefile set filetype=make
 
 " Markdown
-    Bundle 'tpope/vim-markdown'
+    Plugin 'tpope/vim-markdown'
     autocmd FileType markdown command! -range=% Marked :!open -a marked '%'
 
 " PHP
-    Bundle 'StanAngeloff/php.vim'
+    Plugin 'StanAngeloff/php.vim'
     autocmd FileType php imap <d-cr> <esc>A;
 
 
 " misc file types
-    Bundle 'kana/vim-vspec'
+    Plugin 'kana/vim-vspec'
 
 
 

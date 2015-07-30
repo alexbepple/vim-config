@@ -184,25 +184,6 @@ set nocompatible
     set autowrite
 
 
-" Close current buffer – or window when there are no buffers left
-    function! NumberOfBuffers()
-        let buffers = range(1, bufnr('$'))
-        call filter(buffers, 'buflisted(v:val)')
-        return len(buffers)
-    endfunction
-
-    function! CloseCurrent()
-        let bufcount = NumberOfBuffers()
-        if (bufcount == 1)
-            execute ":q"
-        else
-            execute ":bd"
-        endif
-    endfunction
-
-    nnoremap <d-w> :call CloseCurrent()<cr>
-
-
 " check syntax
     Bundle 'scrooloose/syntastic'
     let g:syntastic_error_symbol='✗'

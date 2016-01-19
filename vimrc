@@ -265,6 +265,8 @@ set nocompatible
     Plugin 'elzr/vim-json'
     au BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
+    au BufRead,BufNewFile Tupfile,*.tup setf tup
+
 
 " CoffeeScript
 	Plugin 'kchmck/vim-coffee-script'

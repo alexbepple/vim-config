@@ -180,7 +180,7 @@ set nocompatible
 
 
 " Automatically save everything when losing focus
-    autocmd FocusLost *.*,Makefile :wa
+    autocmd FocusLost * :wa
     set autowrite
 
 

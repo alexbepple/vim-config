@@ -284,7 +284,8 @@ set nocompatible
     Plugin 'elzr/vim-json'
     au BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
-    au BufRead,BufNewFile Tupfile,*.tup setf tup
+    Plugin 'mxw/vim-jsx'
+    let g:jsx_ext_required = 0
 
 
 " CoffeeScript
@@ -323,6 +324,8 @@ set nocompatible
 
 " misc file types
     Plugin 'kana/vim-vspec'
+
+    au BufRead,BufNewFile Tupfile,*.tup setf tup
 
 
 

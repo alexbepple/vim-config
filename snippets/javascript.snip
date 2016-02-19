@@ -1,28 +1,29 @@
 snippet describe
-    describe('${1:what}', function() {
+    describe('${1:what}', () => {
         ${0:TARGET}
-    });
+    })
 
 snippet it
-    it('${1:does what and when}', function() {
-        expect(${0:TARGET})
-    });
+    it('${1:does what and when}', () => {
+        assertThat(${0:TARGET})
+    })
 
 snippet beforeEach
-    beforeEach(function() {
+    beforeEach(() => {
         ${0:TARGET}
-    });
+    })
 
 snippet anonymous_function
 options word
 alias _f
-    function(${1:#:argument}) {
+    function (${1:#:argument}) {
         ${0:TARGET}
     }
 
 snippet anonymous_function_without_parameters
 options word
 alias __f
-    function() {
+    () => {
         ${0:TARGET}
     }
+

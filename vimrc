@@ -255,9 +255,9 @@ set nocompatible
     Plugin 'michaeljsmith/vim-indent-object'
     
     " For local replace
-    nmap gr viwyvai:s/<c-r>"/<c-r>"/gc<left><left><left>
+    nmap gr viwyvai:s/\<<c-r>"\>/<c-r>"/gc<left><left><left>
     " For global replace
-    nnoremap gR viwy:%s/<c-r>"/<c-r>"/gc<left><left><left>
+    nnoremap gR viwy:%s/\<<c-r>"\>/<c-r>"/gc<left><left><left>
 
     Plugin 'tpope/vim-repeat'
 

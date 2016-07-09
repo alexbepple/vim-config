@@ -32,8 +32,8 @@ set nocompatible
     Plugin 'rking/ag.vim'
     let g:ag_qhandler='botright copen 30'
     let g:ag_mapping_message=0
-    let g:agprg="git grep --line-number --ignore-case"
-    let g:agformat="%f:%l:%m"
+    let g:ag_prg='git grep --line-number --ignore-case'
+    let g:ag_format='%f:%l:%m'
     nnoremap -f :Ag! 
 
     Plugin 'vim-scripts/EasyGrep'

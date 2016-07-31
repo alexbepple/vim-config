@@ -322,6 +322,9 @@ set nocompatible
     autocmd FileType make set noexpandtab
     au BufEnter Makefile set filetype=make
 
+" Fastlane
+    au BufEnter Appfile,Fastfile set filetype=ruby
+
 " Markdown
     Plugin 'tpope/vim-markdown'
     autocmd FileType markdown command! -range=% Marked :!open -a marked '%'

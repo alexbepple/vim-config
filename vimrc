@@ -339,6 +339,8 @@ set nocompatible
 
     au BufRead,BufNewFile Tupfile,*.tup setf tup
 
+    " for .gitignore syntax highlighting
+    Plugin 'tpope/vim-fugitive'
 
 
 " Pensieve

@@ -237,6 +237,7 @@ set nocompatible
 
     Plugin 'Shougo/neosnippet'
     let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
+    let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
     vmap <s-z> <Plug>(neosnippet_expand_target)
 
     " automatically close pairwise symbols

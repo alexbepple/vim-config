@@ -261,6 +261,8 @@ set nocompatible
 
     Plugin 'tpope/vim-repeat'
 
+    Plugin 'airblade/vim-gitgutter'
+
 
 """"""""""""""
 " file types

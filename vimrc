@@ -334,6 +334,8 @@ set nocompatible
     Plugin 'StanAngeloff/php.vim'
     autocmd FileType php imap <d-cr> <esc>A;
 
+" Docker
+    Plugin 'ekalinin/Dockerfile.vim'
 
 " misc file types
     Plugin 'kana/vim-vspec'

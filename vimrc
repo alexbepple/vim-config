@@ -130,6 +130,7 @@ set nocompatible
 
     set background=dark
     set cursorline "Highlight the line the cursor is on
+    set number "show line numbers
     syntax on
 
     colorscheme Tomorrow-Night
